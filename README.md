@@ -1,5 +1,5 @@
 # game-box
 
-## Devoloper
+## Developer
 
 ömer faruk TAŞDEMİR
