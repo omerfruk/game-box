@@ -1,4 +1,4 @@
-# game-box
+# Game Box Web Sayfası Bilgileri ve Eğitimleri
 
 ## MARKDOWN
 
