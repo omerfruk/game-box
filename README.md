@@ -38,3 +38,7 @@ Serhat Karakoca
 Musa Yıldırım
 
 Osman YILMAZ
+
+## Kaynakça
+
+- [Nuri AKMAN](https://github.com/nuriakman/PHP-Egitimi)
