@@ -17,6 +17,16 @@
 - [5 Dakikada CSS](https://learnxinyminutes.com/docs/tr-tr/css-tr/)
 - [CSS Seçicileri](./konular/seciciler.css.md)
 
+## GO
+
+- [GO Nedir?](https://golang.org/)
+- [GO Documentation](https://golang.org/doc/)
+- [GO Egzersizleri](https://gobyexample.com/)
+- [GoFiber Framework Nedir ?](https://gofiber.io/)
+- [GoFiber Documentation](https://docs.gofiber.io/)
+- [GORM Framework Nedir ?](https://gorm.io/index.html)
+- [GORM Documentation](https://gorm.io/docs/)
+
 ## Developer
 
 Ömer faruk TAŞDEMİR
