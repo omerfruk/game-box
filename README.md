@@ -10,7 +10,7 @@
 
 Ömer faruk TAŞDEMİR
 
-emrullah KUTLAR
+Emrullah KUTLAR
 
 Serhat Karakoca
 
