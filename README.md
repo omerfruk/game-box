@@ -2,7 +2,7 @@
 
 ## Developer
 
-ömer faruk TAŞDEMİR
+Ömer faruk TAŞDEMİR
 
 emrullah KUTLAR
 
