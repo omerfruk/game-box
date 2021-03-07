@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(219, 226, 226);
+  background-color: rgb(200, 200, 200);
 }
 .scrn {
-  padding-top: 5%;
+  padding-top: 2%;
 }
 .row {
   background-color: white;
