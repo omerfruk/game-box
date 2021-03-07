@@ -215,6 +215,15 @@ button {
 
 
 */
+
+.btn{
+    border-radius: 20px !important;
+}
+.btn:first-child{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+/* ***********************navbar bitimi************************/
 .container{
     padding-top: 75px !important;
 }
