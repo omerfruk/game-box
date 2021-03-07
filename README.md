@@ -43,3 +43,4 @@ Osman YILMAZ
 
 - [Nuri AKMAN](https://github.com/nuriakman/PHP-Egitimi)
 - [Pexels](https://pexels.com)
+- [CSS Gradient](https://cssgradient.io/)

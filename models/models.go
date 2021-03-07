@@ -1,5 +1,9 @@
 package models
 
+import (
+	"gorm.io/gorm"
+)
+
 type Authority int
 
 const (
@@ -8,16 +12,17 @@ const (
 )
 
 type Account struct {
+	gorm.Model
 	Fullname  string    `json:"fullname"`
 	Mail      string    `json:"mail"`
 	Password  string    `json:"password"`
 	Authority Authority `json:"authority"`
-	Userıd    uint
 }
 
 type User struct {
+	AccountId uint
 	Account Account
-	Score   Score
+	Score  []Score
 }
 
 type Score struct {
@@ -28,9 +33,11 @@ type Score struct {
 }
 
 type Developer struct {
-	Account Account
+	gorm.Model
+	AccountId uint
 	Duty string `json:"duty"`
 	Imgsrc string `json:"imgsrc"`
 	Gitsrc string `json:"gitsrc"`
 	Linkın string `json:"linkın"`
+	Account Account
 }
