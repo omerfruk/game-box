@@ -1,87 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Stylish&family=Yeon+Sung&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Stylish&family=Yeon+Sung&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stylish&family=Yeon+Sung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Stylish&family=Yeon+Sung&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin-top: 70px;
-    background-color: #ececec !important;
-
+  margin-top: 70px;
+  background-color: #ececec !important;
 }
 
 li,
 a,
 button {
-
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .top {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 30px 10%;
-    align-items: center;
-    height: 70px;
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(255, 255, 255);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 30px 10%;
+  align-items: center;
+  height: 70px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(255, 255, 255);
 }
 
 .logo a {
-    
-    color: black;
-    margin-top: 4px;
-    cursor: pointer;
-    font-size: 40px;
-
+  color: black;
+  margin-top: 4px;
+  cursor: pointer;
+  font-size: 40px;
 }
-.logo a:hover{
-    color: black;
+.logo a:hover {
+  color: black;
 }
-
 
 .top-nav ul {
-    padding-top: 20px;
-    list-style: none;
-
+  padding-top: 20px;
+  list-style: none;
 }
 
 .top-nav ul li {
-    display: inline-block;
-    padding: 0px 20px;
-
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 .top-nav a {
-    display: block;
-    transition: all 0.3s case 0s;
-    color: rgb(200, 200, 200);
-    cursor: pointer;
-    
+  display: block;
+  transition: all 0.3s case 0s;
+  color: rgb(200, 200, 200);
+  cursor: pointer;
 }
-.mor a:hover{
-    
-    color:rgb(133, 0, 133);
+.mor a:hover {
+  color: rgb(133, 0, 133);
 }
-.pembe a:hover{
-   
-    color: rgb(223, 99, 120);
+.pembe a:hover {
+  color: rgb(223, 99, 120);
 }
-.yesil a:hover{
-    
-    color: green;
+.yesil a:hover {
+  color: green;
 }
-.sari a:hover{
-   
-    color: rgb(236, 236, 88);
+.sari a:hover {
+  color: rgb(236, 236, 88);
 }
+/* footer bar islemleri */
+#footer {
+  padding: 5px 0;
+}
+#footer p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #555555;
+}
+.social-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.social-icon {
+  display: inline;
+  padding-left: 9x;
+  padding-right: 9px;
+  color: #fff;
+}
+.social-icon a,
+.social-icon .fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #000;
+  line-height: 40px;
+}
+.box {
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+}
+.box img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.box img:hover {
+  transform: scale(0.9);
+}
+.box h1 {
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+.box h5 {
+  font-size: 13px;
+}
+/* footer bar islemleri bitis*/
 
 /*.social {
     width: 150px;
@@ -113,91 +156,79 @@ button {
 }
 */
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 953px) {
-    .social {
+  .social {
+    display: none;
+  }
 
-        display: none;
+  .menu-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    padding-left: 50px !important;
+    position: sticky right;
+    top: 10px;
+    z-index: 2;
+  }
 
-    }   
+  .logo {
+    padding-right: 50px;
+  }
 
-    .menu-toggle {
-        display: block;
-        width: 40px;
-        height: 40px;
-        margin: 10px;
-        background: rgb(255, 255, 255);
-        cursor: pointer;
-        text-align: center;
-        font-size: 30px;
-        color: black;
-        padding-left: 50px !important;
-        position: sticky right;
-        top:10px;
-        z-index: 2;
+  .menu-toggle:before {
+    content: "\f0c9";
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
 
+  .menu-toggle.active:before {
+    content: "\f00d";
+    font-family: fontAwesome;
+    line-height: 40px;
+    transition: width 2s;
+  }
 
-    }
+  .top-nav {
+    display: none;
+  }
 
-    .logo {
-        padding-right: 50px;
-    }
+  .top-nav a {
+    color: rgb(200, 200, 200);
+  }
 
-    .menu-toggle:before {
-        
-        content: '\f0c9';
-        font-family: fontAwesome;
-        line-height: 40px;
+  .top-nav.active {
+    justify-content: center;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    top: 0px;
+    right: 0px;
+    display: block;
+  }
 
-    }
+  .top-nav.active li {
+    display: block;
+  }
 
-    .menu-toggle.active:before {
-        content: '\f00d';
-        font-family: fontAwesome;
-        line-height: 40px;
-        transition: width 2s;
-
-    }
-
-    .top-nav {
-        display: none;
-        
-    }
-
-    .top-nav a {
-       
-        color:rgb(200, 200, 200);
-
-    }
-
-    .top-nav.active {
-        justify-content: center;
-        position: fixed;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        background-color: rgb(255, 255, 255);
-        top:0px;
-        right: 0px;
-        display: block;
-       
-    }
-   
-    .top-nav.active li {
-        display: block;
-    }
-
-    .top-nav.active a {
-        padding-left: 20vh;
-        justify-content: center;
-        flex-direction: column;
-        display: block;
-        box-sizing: border-box;
-        margin: 100px 0;
-    }
-
+  .top-nav.active a {
+    padding-left: 20vh;
+    justify-content: center;
+    flex-direction: column;
+    display: block;
+    box-sizing: border-box;
+    margin: 100px 0;
+  }
 }
 /*  ↑ nav bar
 .top-nav.active {
@@ -215,7 +246,6 @@ button {
 
 
 */
-.container{
-    padding-top: 75px !important;
+.container {
+  padding-top: 75px !important;
 }
-
