@@ -100,11 +100,13 @@ button {
   line-height: 40px;
 }
 .box {
+
   width: 150px;
   padding: 5px;
   text-align: center;
   margin: auto;
   margin-top: 5%;
+  margin-bottom: 35%;
 }
 .box img {
   border-radius: 50%;
