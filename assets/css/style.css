@@ -144,49 +144,9 @@ button {
     box-sizing: border-box;
     margin: 100px 0;
   }
-  /* footer madia baslangıcı */
-  
-  /*.social-icon a,
-  .social-icon .fab {
-    width: 10px !important;
-    height: 10px!important;
-    border-radius: 10px!important;
-    background-color: #000!important;
-    line-height: 10px!important;
-  }
-  .box {
-    border: 2px solid red!important;
-    width: 100px!important;
-    padding: 5px!important;
-    text-align: center!important;
-    margin: auto!important;
-    margin-top: 5%!important;
-    
-  }
-  .box img {
-    border-radius: 50%!important;
-    width: 50px!important;
-    height: 50px!important;
-    transition: 0.6s!important;
-    cursor: pointer!important;
-  }
-  .box img:hover {
-    transform: scale(0.9);
-  }
-  .box h1 {
-    font-size: 10px!important;
-    letter-spacing: 4px!important;
-    font-weight: bold;
-  }
-  .box h5 {
-    font-size: 10px!important;
-  }
-  .fixed-bottom{
-    position: fixed;
-    bottom: 0px;
-    height: 300px !important;
-    width: 100vh!important;
-
+ 
+  .login{
+    display: none;
   }
     /* footer madia bitimi */
 }
@@ -204,12 +164,13 @@ button {
 
                                     /* ***********************footer baslangici************************/
   .kartlar{
+    
     justify-content:center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: inherit;
-    width: 300px;
+    height: 300px;
+    width: 200px;
     float: left;
   }
   .bilgi{
@@ -279,7 +240,7 @@ button {
     transform: scale(1.2);
   }
   .foot{
-    position: fixed;
+    position: static;
     bottom: 70px;
     background: rgb(41,40,52);
     background: linear-gradient(90deg, rgba(41,40,52,1) 19%, rgba(63,80,150,1) 54%, rgba(39,62,162,1) 100%);
@@ -289,13 +250,17 @@ button {
     justify-content: space-between !important;
     align-items: flex-start;
     display: flex;
+   
+    
+
     
   }
   .copy{
+    text-align: center;
     align-items: center;
-    position: fixed;
+    position: static;
     bottom: 0px;
-    left: 45%;
+    
   }
  .copy p{
    font-size: 14px;
@@ -303,4 +268,34 @@ button {
    line-height: 40px;
    color: #555;
  }
+ @media (max-width: 900px) {
+  .foot{
+    position: static;
+    bottom: 70px;
+    background: rgb(41,40,52);
+    background: linear-gradient(90deg, rgba(41,40,52,1) 19%, rgba(63,80,150,1) 54%, rgba(39,62,162,1) 100%);
+    height:900px;
+    width: 100%;
+    padding: 0px 10px !important;
+    justify-content: space-between !important;
+    align-items: flex-start;
+    display:inline-block;
+   
+    
+  }
+  .kartlar{
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    float: left;
+  }
+  
+  .kartlar900{
+    -ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;
+  }
+ }
+ 
                                     /* ***********************footer bitimi************************/
