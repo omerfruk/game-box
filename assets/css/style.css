@@ -69,64 +69,7 @@ button {
 .sari a:hover {
   color: rgb(236, 236, 88);
 }
-/* footer bar islemleri */
-#footer {
-  padding: 5px 0;
-}
-#footer p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 40px;
-  color: #555555;
-}
-.social-icons {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.social-icon {
-  display: inline;
-  padding-left: 9x;
-  padding-right: 9px;
-  color: #fff;
-}
-.social-icon a,
-.social-icon .fab {
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
-  background-color: #000;
-  line-height: 40px;
-}
-.box {
 
-  width: 150px;
-  padding: 5px;
-  text-align: center;
-  margin: auto;
-  margin-top: 5%;
-  
-}
-.box img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  transition: 0.6s;
-  cursor: pointer;
-}
-.box img:hover {
-  transform: scale(0.9);
-}
-.box h1 {
-  font-size: 13px;
-  letter-spacing: 4px;
-  font-weight: bold;
-}
-.box h5 {
-  font-size: 13px;
-}
-/* footer bar islemleri bitis*/
 
 /*.social {
     width: 150px;
@@ -231,6 +174,9 @@ button {
     box-sizing: border-box;
     margin: 100px 0;
   }
+  /* footer madia baslangıcı */
+  
+    /* footer madia baslangıcı */
 }
 /*  ↑ nav bar
 .top-nav.active {
@@ -265,3 +211,61 @@ button {
     padding-top: 75px !important;
 >>>>>>> 9ea199de337d6c8a6f7c076f0c37e747efe30c52
 }
+/* footer bar islemleri */
+#footer {
+    padding: 5px 0;
+  }
+  #footer p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #555555;
+  }
+  .social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .social-icon {
+    display: inline;
+    padding-left: 9x;
+    padding-right: 9px;
+    color: #fff;
+  }
+  .social-icon a,
+  .social-icon .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #000;
+    line-height: 40px;
+  }
+  .box {
+  
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    
+  }
+  .box img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: 0.6s;
+    cursor: pointer;
+  }
+  .box img:hover {
+    transform: scale(0.9);
+  }
+  .box h1 {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+  .box h5 {
+    font-size: 13px;
+  }
+  /* footer bar islemleri bitis*/
