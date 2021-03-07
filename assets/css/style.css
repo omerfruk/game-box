@@ -246,6 +246,20 @@ button {
 
 
 */
+<<<<<<< HEAD
 .container {
   padding-top: 75px !important;
+=======
+
+.btn{
+    border-radius: 20px !important;
+}
+.btn:first-child{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+/* ***********************navbar bitimi************************/
+.container{
+    padding-top: 75px !important;
+>>>>>>> 9ea199de337d6c8a6f7c076f0c37e747efe30c52
 }
