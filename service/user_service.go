@@ -7,7 +7,6 @@ func CreateUser(name string,mail string,password string,isDeveloper bool)  {
 	temp.Account.Fullname=name
 	temp.Account.Mail=mail
 	temp.Account.Password=password
-	/*temp.Account.Userıd=*/	
 }
 func AddScore()  {
 	
