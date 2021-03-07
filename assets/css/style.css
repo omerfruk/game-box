@@ -202,85 +202,30 @@ button {
 }
                                      /* ***********************navbar bitimi************************/
 
-                                                          /* footer bar islemleri */
-/*#footer {
-    padding: 5px 0;
-  }
-  #footer p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 40px;
-    color: #555555;
-  }
-  .social-icons {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .social-icon {
-    display: inline;
-    padding-left: 9x;
-    padding-right: 9px;
-    color: #fff;
-  }
-  .social-icon a,
-  .social-icon .fab {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    background-color: #000;
-    line-height: 40px;
-  }
-  .box {
-  
-    width: 150px;
-    padding: 5px;
-    text-align: center;
-    margin: auto;
-    margin-top: 5%;
-    
-  }
-  .box img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    transition: 0.6s;
-    cursor: pointer;
-  }
-  .box img:hover {
-    transform: scale(0.9);
-  }
-  .box h1 {
-    font-size: 13px;
-    letter-spacing: 4px;
-    font-weight: bold;
-  }
-  .box h5 {
-    font-size: 13px;
-  }
-  .fixed-bottom{
-    position: fixed;
-    bottom: 0px;
-    height: 350px;
-    width: 100vh;
-    border:2px solid black;
-  }
-  /* footer bar islemleri bitis*/
-
-  
+                                    /* ***********************footer baslangici************************/
   .kartlar{
-    background-color:  rgb(62,62,62) !important; 
-    justify-content: center;
-    display: block;
+    justify-content:center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
     height: inherit;
-    width: 150px;
+    width: 300px;
     float: left;
-    
   }
   .bilgi{
+    padding-top: 15px;
     color: lightgoldenrodyellow;
+  }
+  .bilgi p{
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+
+  }
+  .bilgi h5{
+    text-align: center;
+    font-size: 13px;
   }
   .social-icons {
     list-style-type: none;
@@ -288,18 +233,40 @@ button {
     padding: 0;
   }
   .social-icon {
+    text-align: center;
     padding-left: 5px;
     display: inline;
     color: #fff;
   }
+
   .social-icon a,
   .social-icon .fab {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
     color: lightgoldenrodyellow;
-    line-height: 40px;
+    line-height: 50px;
   }
+  .social-icon .fa-instagram:hover{
+    color: rgb(142, 56, 192);
+    background-color: white;
+    transition: ease 0.7s;
+
+  }
+  .social-icon .fa-linkedin:hover{
+    color: rgb(59, 75, 219);
+    background-color: white;
+    transition: ease 0.7s;
+
+  }
+  .social-icon .fa-github:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    transition: ease 0.7s;
+    
+  }
+
   .resim img{
     background-color:inherit !important;
     border-radius: 50%;
@@ -308,12 +275,17 @@ button {
     transition: 0.6s;
     cursor: pointer;
   }
+  .resim img:hover {
+    transform: scale(1.2);
+  }
   .foot{
     position: fixed;
     bottom: 70px;
-    background-color: rgb(62, 62, 62) !important;
+    background: rgb(41,40,52);
+    background: linear-gradient(90deg, rgba(41,40,52,1) 19%, rgba(63,80,150,1) 54%, rgba(39,62,162,1) 100%);
     height: 300px;
     width: 100%;
+    padding: 0px 10px;
     justify-content: space-between !important;
     align-items: flex-start;
     display: flex;
@@ -331,3 +303,4 @@ button {
    line-height: 40px;
    color: #555;
  }
+                                    /* ***********************footer bitimi************************/
