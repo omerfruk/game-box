@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../assets/css/login.css" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -12,20 +12,37 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/signup.css" />
+    <title>Sing In</title>
   </head>
   <body>
     <section class="Form my-4 mx-5">
       <div class="container scrn">
         <div class="row no-gutters">
           <div class="col-lg-5 p-0">
-            <img src="../img/login.jpg" class="img-fluid" alt="" />
+            <img src="../img/singup.jpg" class="img-fluid" alt="" />
           </div>
           <div class="col-lg-7 px-5 pt-5">
-            <h1 class="font-weight-bold py-3">Log-in</h1>
-            <h4>Sing into your account</h4>
-            <form method="POST" action="/login">
+            <h1 class="font-weight-bold py-3">Sign-Up</h1>
+            <h4>Sign up now</h4>
+            <form method="POST" action="/singup">
               <div class="form-row">
+                <div class="col-lg-7">
+                  <input
+                    name="Fullname"
+                    type="text"
+                    placeholder="Full Name"
+                    class="form-control my-3 p-4"
+                  />
+                </div>
+                <div class="col-lg-7">
+                  <input
+                    name="phone"
+                    type="text"
+                    placeholder="Phone Number"
+                    class="form-control my-3 p-4"
+                  />
+                </div>
                 <div class="col-lg-7">
                   <input
                     name="email"
@@ -47,11 +64,10 @@
               </div>
               <div class="form-row">
                 <div class="col-lg-7">
-                  <button type="submit" class="btn1 mt-3 mb-5">Login</button>
+                  <button type="submit" class="btn1 mt-3 mb-5">Sing UP</button>
                 </div>
               </div>
-              <a href="#">Forgot Password</a>
-              <p>Don't have an account ? <a href="/singup">Register here</a></p>
+              <a href="/login">Already have an account?</a>
             </form>
           </div>
         </div>
