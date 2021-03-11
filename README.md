@@ -2,8 +2,16 @@
 
 ## YAPILACAKLAR
 
+- [ ] index sayfasi olusrurulacak
 - [ ] footerBar yukari tasinilacak (yukseklik biraz daha articak)
 - [x] login sayfasi yapilacak
+- [x] Sign Up sayfasi yapilacak
+- [ ] renk ayarlari yapilacak
+- [ ] oyunlar yazilacak
+- [x] database şemasi çizilecek (hayal edilecek)
+- [ ] models olusturulup db baglantisi yapilacak
+- [ ] back and routerlari olusturulacak
+- [ ] domain satin alinacak
 
 ## MARKDOWN
 
