@@ -1,5 +1,10 @@
 # Game Box Web Sayfası Bilgileri ve Eğitimleri
 
+## YAPILACAKLAR
+
+- [ ] footerBar yukari tasinilacak (yukseklik biraz daha articak)
+- [x] login sayfasi yapilacak
+
 ## MARKDOWN
 
 - [MarkDown Kodlaması](./konular/markdown.kodlama.md)
