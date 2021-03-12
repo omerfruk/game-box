@@ -3,15 +3,25 @@
 ## YAPILACAKLAR
 
 - [ ] index sayfasi olusrurulacak
+- [ ] responsive bir dizayn olusturulacak
+- [ ] topbar js ve css ile desteklenecek
+- [ ] index sayfasına oyunlarin önizlenimi gömülecek
+- [ ] index sayfasına randum oyun leaderboardlari gösterilecek
+- [ ] session veya jwt kullanılıp oturum yönetilecek
+- [ ] postgreSql kullanılıp veri depolaması yapılacak
+- [ ] servisler olusturulacak (querry sorgulari olusturulacak) 
 - [ ] footerBar yukari tasinilacak (yukseklik biraz daha articak)
-- [x] login sayfasi yapilacak
-- [x] Sign Up sayfasi yapilacak
+- [x] login front-end sayfasi yapilacak
+- [x] Sign front-end Up sayfasi yapilacak
+- [ ] login back-end sayfasi bağlanacak
+- [ ] Sign back-end sayfasi bağlanacak
 - [ ] renk ayarlari yapilacak
 - [ ] oyunlar yazilacak
 - [x] database şemasi çizilecek (hayal edilecek)
 - [ ] models olusturulup db baglantisi yapilacak
 - [ ] back and routerlari olusturulacak
 - [ ] domain satin alinacak
+
 
 ## MARKDOWN
 
