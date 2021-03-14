@@ -8,13 +8,6 @@ import (
 	"gorm.io/gorm"
 )
 
-<<<<<<< HEAD
-func CreateUser(name string, mail string, password string, isDeveloper bool) {
-	temp := new(models.User)
-	temp.Account.Fullname = name
-	temp.Account.Mail = mail
-	temp.Account.Password = password
-=======
 func CreateUser(name string, mail string, password string) {
 	temp := models.User{
 		Account: models.Account{
@@ -32,7 +25,6 @@ func CreateUser(name string, mail string, password string) {
 		}
 		fmt.Println("boyle bir kayit var")
 	}
->>>>>>> ed6173dc6f946851a1da594d8d145cc30f29a50a
 }
 func AddScore() {
 
