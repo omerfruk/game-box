@@ -38,6 +38,7 @@ type Developer struct {
 	gorm.Model
 	Duty      string `json:"duty"`
 	Imgsrc    string `json:"imgsrc"`
+	Inssrc    string `json:"inssrc"`
 	Gitsrc    string `json:"gitsrc"`
 	Linkın    string `json:"linkın"`
 	AccountID uint
