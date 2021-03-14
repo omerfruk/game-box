@@ -9,12 +9,13 @@ import (
 
 // post request geldigi zaman buraya yonlenecek
 func SignupPost(c *fiber.Ctx) error {
-	var temp models.Account
+	var temp models.User
 	err := c.BodyParser(&temp)
+	fmt.Println(temp.Mail)
 	if err != nil {
 		fmt.Println(err)
 	}
-	service.CreateUser(temp.Fullname, temp.Mail, temp.Password, false)
+	service.CreateUser(temp.Fullname, temp.Mail, temp.Password)
 	return c.Redirect("/")
 }
 
