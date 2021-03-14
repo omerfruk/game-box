@@ -4,13 +4,10 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/template/html"
-<<<<<<< HEAD
-	"github.com/serhatkarakoca/game-box/database"
-=======
+
 	"github.com/omerfruk/game-box/database"
 	"github.com/omerfruk/game-box/routers"
 	"log"
->>>>>>> ed6173dc6f946851a1da594d8d145cc30f29a50a
 )
 
 func main() {
