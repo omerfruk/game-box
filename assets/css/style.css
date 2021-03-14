@@ -9,7 +9,7 @@
 }
 
 body {
- 
+  
   background-color: #ececec !important;
 }
 
@@ -20,6 +20,7 @@ button {
 }
 
 .top {
+  
   position: fixed;
   display: flex;
   width: 100%;
@@ -29,6 +30,7 @@ button {
   height: 70px;
   font-family: "Poppins", sans-serif;
   background-color: rgb(255, 255, 255);
+  z-index: 10;
  
 }
 
@@ -117,7 +119,7 @@ button {
     padding-right: 10px !important;
     position: sticky right;
     top: 10px;
-    z-index: 2;
+    z-index: 10;
     
   }
  
@@ -126,13 +128,14 @@ button {
     content: "\f0c9";
     font-family: fontAwesome;
     line-height: 40px;
+    transition:all 0.3s ease;
   }
 
   .menu-toggle.active:before {
     content: "\f00d";
     font-family: fontAwesome;
     line-height: 40px;
-    transition: ease 2s;
+    transition:all 0.3s ease;
   }
 
   .top-nav {
@@ -196,8 +199,6 @@ button {
     padding: 0px 20px;
   }
 }
-
-
 
 .btn{
     border-radius: 20px !important;
@@ -294,7 +295,7 @@ button {
     height: 300px;
     width: 100%;
     margin-bottom: 15px;
-    padding: 0px 10px;
+    padding: 0px 5px;
     justify-content: space-between !important;
     align-items: flex-start;
     display: flex;
@@ -344,6 +345,13 @@ button {
  
                                     /* ***********************footer bitimi************************/
 
+section{
+  padding: 80px 30px 5px 30px ;
+}
 .yazi{
-  padding: 80px 20px;
+  padding-right: 2px;
+ 
+  display: block;
+  float: left;
+  
 }
