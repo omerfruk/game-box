@@ -20,11 +20,9 @@ type Account struct {
 }
 
 type User struct {
-	gorm.Model
-	ScoreID   uint
-	Score     Score
-	AccountID uint
-	Account   Account
+	Account
+	ScoreID uint
+	Score   Score
 }
 
 type Score struct {
@@ -35,12 +33,10 @@ type Score struct {
 }
 
 type Developer struct {
-	gorm.Model
-	Duty      string `json:"duty"`
-	Imgsrc    string `json:"imgsrc"`
-	Inssrc    string `json:"inssrc"`
-	Gitsrc    string `json:"gitsrc"`
-	Linkın    string `json:"linkın"`
-	AccountID uint
-	Account   Account
+	Account
+	Duty   string `json:"duty"`
+	Imgsrc string `json:"imgsrc"`
+	Inssrc string `json:"inssrc"`
+	Gitsrc string `json:"gitsrc"`
+	Linkın string `json:"linkın"`
 }
