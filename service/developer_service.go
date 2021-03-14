@@ -30,7 +30,11 @@ func CreateDeveloper(name string, mail string, duty string, gitsrc string, insts
 			fmt.Println(err)
 		}
 	}
-
 	fmt.Println("boyle bir kayıt var")
+}
 
+func GetAllDevelopers() []models.Developer {
+	var temp []models.Developer
+	database.DB().Find(&temp)
+	return temp
 }
