@@ -6,6 +6,7 @@ import (
 	"github.com/gofiber/template/html"
 	"github.com/omerfruk/game-box/database"
 	"github.com/omerfruk/game-box/routers"
+	"github.com/omerfruk/game-box/service"
 	"log"
 )
 
@@ -16,7 +17,7 @@ func main() {
 
 	database.ConnectAndMigrate()
 	routers.Router(app)
-
+	service.CreateDeveloper("Ömer Faruk Taşdemir", "omer@mail.com", "Back-and Developer", "github.com/omerfruk", "instagram.com/omer_fruk", "https://www.linkedin.com/in/%C3%B6mer-faruk-ta%C5%9Fdemir-255114183/", "../img/developers/omer.jpg")
 	log.Fatal(app.Listen(":4747"))
 
 }
