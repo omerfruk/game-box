@@ -21,7 +21,7 @@ type Account struct {
 
 type User struct {
 	Account
-	ScoreID uint
+	ScoreID *uint
 	Score   Score
 }
 

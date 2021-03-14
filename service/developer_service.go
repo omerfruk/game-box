@@ -29,8 +29,8 @@ func CreateDeveloper(name string, mail string, duty string, gitsrc string, insts
 		if err != nil {
 			fmt.Println(err)
 		}
+		fmt.Println("boyle bir kayit var")
 	}
-	fmt.Println("boyle bir kayıt var")
 }
 
 func GetAllDevelopers() []models.Developer {

@@ -13,4 +13,7 @@ func Router(app *fiber.App) {
 	//signup post ve get metodlari
 	app.Get("/signup", handlers.SignupGet)
 	app.Post("/signup", handlers.SignupPost)
+	//login yonlendirmesi
+	app.Get("/login", handlers.LoginGet)
+	app.Post("/login", handlers.LoginPost)
 }
