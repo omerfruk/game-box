@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- <link
+    
+  <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
-    />-->
+    >
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ,
@@ -19,22 +19,22 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
-<body>
+
   <!-- NavBar -->
   <div class="RESNAVBAR">
     <header class="top">
 
       <div class="logo">
-        <a href="index.html"> <img src="../assets/logo/icons8-porsche-911-old-50.png" alt=""> Cars</a>
+        <a href="index.html"> <img src="../assets/logo/game-box-logo.png" alt=""></a>
       </div>
 
       <nav class="top-nav">
         <ul class="navlink">
-          <li class="mor"><a href="index.html" style=" color:rgb(133, 0, 133);">Anasayfa</a></li>
+          <li class="mor"><a href="index.html" style=" color:rgb(133, 0, 133);">Ana Sayfa</a></li>
           <li class="pembe"><a href="demo.html">Oyunlar</a></li>
           <li class="yesil"><a href="dashboard.html">Leaderboards</a></li>
           <li class="sari"><a href="hakkımızda.html">Hakkımızda</a></li>
-          <li><a href="login.html"><button type="button" class="btn btn-light">Giris</button></a></li>
+          <li><a href="login.html"><button type="button" class="btn btn-light">Giriş</button></a></li>
           <li><a href="signup.html"><button type="button" class="btn btn-light">Kayıt Ol</button></a></li>          
         </ul>
       </nav>
@@ -44,8 +44,14 @@
       <div class="menu-toggle"></div>
   </div>
   </header>
-  <div>
+  <!-- NavBar End-->
+  <body>
+ 
 
+
+  
+  <!-- Body -->
+  <div class="yazi">
     Lorem ipsum dolor sit
     amet consectetur, adipisicing elit.
     Quos minus recusandae, voluptatem fugiat id s
@@ -115,136 +121,33 @@
     tatem fugiat id sed! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos minus recusandae, vol
     uptatem fugiat id sed!</div>
 
-
-
-  <!-- NavBar End-->
-  <!-- Body -->
   <!-- Body End-->
   <!-- footer  -->
   <footer>
     <div class="foot">
+     {{range $index,$data:=.}}
       <div class="kartlar  kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/emrullah.jpg" alt=""></div>
+        <div class="resim"><img src="{{$data.Imgsrc}}" alt=""></div>
         <div class="bilgi">
-          <p>Emrullah</p>
-          <h5>Developer</h5>
+          <p>{{$data.Fullname}}</p>
+          <h5>{{$data.Duty}}</h5>
         </div>
         <div class="sosyal">
           <ul class="social-icons">
             <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="{{$data.Inssrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
             </li>
             <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="{{$data.Linkın}}" target="_blank"><i class="fab fa-linkedin"></i></a>
             </li>
             <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="{{$data.Gitsrc}}" target="_blank"><i class="fab fa-github"></i></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="kartlar kartlar900">
-        <div class="resim"><img src="../img/Kullanıcılar/musa.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Musa</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
+      {{end}}
       </div>
-      <div class="kartlar  kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/ibrahim.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>İbrahim</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="kartlar kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/serhat.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Serhat</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="kartlar kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/omer.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Ömer</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="kartlar  kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/osman.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Osman</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
     <div class="copy">
       <p> &copy; Copyright Game-Box </p>
     </div>
