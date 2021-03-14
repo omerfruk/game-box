@@ -264,19 +264,10 @@ button {
   }
   
   .foot{
-<<<<<<< HEAD
-    position: static;
-    background: #fceabb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-
-=======
     margin-bottom: 15px;
     position: relative;
     background: rgb(79, 12, 141);
     background: linear-gradient(90deg, rgba(204, 13, 13, 0.904)21%, rgb(214, 110, 13) 56%, rgb(206, 203, 16) 100%);
->>>>>>> ed6173dc6f946851a1da594d8d145cc30f29a50a
     height: 300px;
     width: 100%;
     padding: 0px 10px;
