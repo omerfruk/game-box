@@ -248,8 +248,11 @@ button {
   }
   .foot{
     position: static;
-    background: rgb(41,40,52);
-    background: linear-gradient(90deg, rgba(41,40,52,1) 19%, rgba(63,80,150,1) 54%, rgba(39,62,162,1) 100%);
+    background: #fceabb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
     height: 300px;
     width: 100%;
     padding: 0px 10px;
