@@ -19,5 +19,6 @@ func SignupPost(c *fiber.Ctx) error {
 }
 
 func SignupGet(c *fiber.Ctx) error {
+
 	return c.Render("signup", true)
 }
