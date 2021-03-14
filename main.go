@@ -5,13 +5,16 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/template/html"
 	"github.com/omerfruk/game-box/database"
+	"log"
 )
 
 func main() {
-	engine := html.New("views",".html")
+	engine := html.New("views", ".html")
 	app := fiber.New(fiber.Config{Views: engine})
 	app.Use(cors.New())
 
 	database.ConnectAndMigrate()
+
+	log.Fatal(app.Listen(":4747"))
 
 }
