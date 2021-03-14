@@ -6,6 +6,9 @@ import (
 )
 
 func Router(app *fiber.App) {
+	//static dosyalari cekmek icin
+	app.Static("/", "./")
+
 	app.Get("/", handlers.IndexGet)
 	//signup post ve get metodlari
 	app.Get("/signup", handlers.SignupGet)
