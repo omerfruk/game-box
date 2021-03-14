@@ -10,18 +10,19 @@ import (
 
 const (
 	HOST     = "localhost"
-	DATABASE = "blog"
+	DATABASE = "gamebox"
 	USER     = "postgres"
 	PASSWORD = "123"
 )
 
 var db *gorm.DB
 
-func DB() *gorm.DB  {
+func DB() *gorm.DB {
 	return db
 }
+
 //db baglantısını gerceklestirecegimiz alan
-func Connect()  {
+func Connect() {
 	vt := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=disable", HOST, USER, PASSWORD, DATABASE)
 	var err error
 	db, err = gorm.Open(postgres.Open(vt), &gorm.Config{
@@ -33,13 +34,15 @@ func Connect()  {
 	sqlDB, _ := db.DB()
 	sqlDB.SetMaxOpenConns(10)
 }
+
 //2 methodu birden cagirma metodu
 func ConnectAndMigrate() {
 	Connect()
 	Migrate()
 }
+
 //db ile models verilerini haberdar edecek method
-func Migrate()  {
+func Migrate() {
 	db.AutoMigrate(models.User{})
 	db.AutoMigrate(models.Account{})
 	db.AutoMigrate(models.Developer{})
