@@ -25,21 +25,22 @@ button {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 30px 10%;
+  padding: 30px 5%;
   align-items: center;
   height: 70px;
   font-family: "Poppins", sans-serif;
   background-color: rgb(255, 255, 255);
+ 
 }
 
 .logo a {
-  color: black;
+  color: rgb(180, 59, 59);
   margin-top: 4px;
   cursor: pointer;
   font-size: 40px;
 }
 .logo a:hover {
-  color: black;
+  color: rgb(180, 59, 59);
 }
 
 .top-nav ul {
@@ -52,11 +53,21 @@ button {
   padding: 0px 20px;
 }
 
+.top-nav ul li:nth-child(4){
+  padding-right: 275px ;
+}
+.top-nav ul li:nth-child(5){
+  padding-right: 0px !important;
+}
+
 .top-nav a {
   display: block;
   transition: all 0.3s case 0s;
   color: rgb(200, 200, 200);
   cursor: pointer;
+}
+.top-nav button{
+  color: rgb(200, 200, 200);
 }
 .mor a:hover {
   color: rgb(133, 0, 133);
@@ -94,9 +105,11 @@ button {
     font-size: 30px;
     color: black;
     padding-left: 50px !important;
+    padding-right: 10px !important;
     position: sticky right;
     top: 10px;
     z-index: 2;
+    
   }
 
   .logo {
@@ -113,7 +126,7 @@ button {
     content: "\f00d";
     font-family: fontAwesome;
     line-height: 40px;
-    transition: width 2s;
+    transition: ease 2s;
   }
 
   .top-nav {
@@ -150,12 +163,14 @@ button {
     flex-direction: column;
     display: block;
     box-sizing: border-box;
-    margin: 50px 0;
+    margin: 40px 0;
   }
   .login{
     display: none;
   }
-  
+  .top-nav ul li:nth-child(4){
+    padding-right: 20px !important;
+  }
     
 }
 
