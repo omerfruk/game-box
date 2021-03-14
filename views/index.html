@@ -125,128 +125,29 @@
   <!-- footer  -->
   <footer>
     <div class="foot">
+     {{range $index,$data:=.}}
       <div class="kartlar  kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/emrullah.jpg" alt=""></div>
+        <div class="resim"><img src="{{$data.Imgsrc}}" alt=""></div>
         <div class="bilgi">
-          <p>Emrullah</p>
-          <h5>Developer</h5>
+          <p>{{$data.Fullname}}</p>
+          <h5>{{$data.Duty}}</h5>
         </div>
         <div class="sosyal">
           <ul class="social-icons">
             <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="{{$data.Inssrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
             </li>
             <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="{{$data.Linkın}}" target="_blank"><i class="fab fa-linkedin"></i></a>
             </li>
             <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="{{$data.Gitsrc}}" target="_blank"><i class="fab fa-github"></i></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="kartlar kartlar900">
-        <div class="resim"><img src="../img/Kullanıcılar/musa.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Musa</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
+      {{end}}
       </div>
-      <div class="kartlar  kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/ibrahim.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>İbrahim</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="kartlar kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/serhat.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Serhat</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="kartlar kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/omer.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Ömer</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="kartlar  kartlar900 ">
-        <div class="resim"><img src="../img/Kullanıcılar/osman.jpg" alt=""></div>
-        <div class="bilgi">
-          <p>Osman</p>
-          <h5>Developer</h5>
-        </div>
-        <div class="sosyal">
-          <ul class="social-icons">
-            <li class="social-icon">
-              <a href="{{.Footer.InstaSrc}}" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.FaccSrc}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li class="social-icon">
-              <a href="{{.Footer.GitSrc}}" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
     <div class="copy">
       <p> &copy; Copyright Game-Box </p>
     </div>
