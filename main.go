@@ -4,7 +4,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/template/html"
-
 	"github.com/omerfruk/game-box/database"
 	"github.com/omerfruk/game-box/routers"
 	"log"
@@ -25,9 +24,7 @@ func main() {
 		service.CreateDeveloper("Emrullah KUTLAR", "emrullah.ktlr@mail.com", "Front-end Developer", "https://github.com/EmrullahKutlar", "instagram.com/emrllah_k", "https://www.linkedin.com/", "../img/developers/emrullah.jpg")
 		service.CreateDeveloper("Osman YILMAZ", "osman.yilmaz@hotmail.com", " Junior Software Developer", "github.com/osmanyılmaz", "instagram.com/osman.yılmaz","https://www.linkedin.com/","../img/developers/osman.jpg")
 		service.CreateDeveloper("musa yıldırım", "musayildirim.yldrm@gmail.com", " Junior Software Developer", "github.com/Sunset2226", "instagram.com/musayldr.m","https://www.linkedin.com/","../img/developers/musa.jpg")
-
 	*/
-
 	log.Fatal(app.Listen(":4747"))
 
 }
