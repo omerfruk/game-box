@@ -344,6 +344,7 @@ footer {
       justify-content: space-between !important;
       align-items: flex-start;
       display: block;
+      width: 100%;
   }
 
   .copy {
@@ -369,24 +370,25 @@ footer {
 
 /* ***********************footer bitimi************************/
 
-  section {
-  padding: 80px 30px 0px 30px;
-  
-  
-  }
-
 
 
 /*******************  oyun Kartları baslangici **********************/
+section {
+  padding-top: 80px;
+  padding-left: 10%;
+  padding-right: 10%;
+  
+  }
+
 .scene {
   padding-top: 100px;
-  padding-left: 50px;
-  width: 90%;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   perspective: 800px;
-  padding-left: 150px;
+  
 }
 
 .card {
@@ -399,6 +401,8 @@ footer {
   cursor: pointer;
   transition: 0.75s ease-in-out;
   transform-style: preserve-3d;
+  display: flex;
+  flex-direction: row;
 
 }
 
@@ -415,6 +419,8 @@ footer {
   backface-visibility: hidden;
   transition:  0.75s ease-in-out;
   -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+  display: flex;
+  flex-direction: row;
 }
 
 .card img {
@@ -441,5 +447,58 @@ text-align: center;
   font-size: 20px;
   
 }
+@media (max-width: 1170px) {
 
+  .card {
+
+      position: relative;
+      width: 300px;
+      height: 450px;
+      margin-bottom: 175px !important;
+      color: white;
+      cursor: pointer;
+      transition: 0.75s ease-in-out;
+      transform-style: preserve-3d;
+      display: flex;
+      flex-direction: column;
+      
+      
+  
+  }
+  .scene {
+      padding-top: 100px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      perspective: 800px;
+      flex-direction: column;
+      
+      
+  }
+  .card img {
+      width: 300px ; 
+      height: 450px ;
+      object-fit: cover;
+      display: flex;
+      flex-direction: column;
+  }
+  .card__face {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition:  0.75s ease-in-out;
+      -webkit-box-reflect: unset;
+  }
+  .card:hover {
+      transform: none;
+  }
+  
+  .card__face--back {
+      transform: none;
+  }
+}
 /*******************  oyun Kartları bitimi **********************/
