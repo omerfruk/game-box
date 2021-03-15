@@ -15,14 +15,14 @@ func LoginGet(c *fiber.Ctx) error {
 	return c.Render("login", true)
 }
 
-var store = session.New(session.Config{
+var Store = session.New(session.Config{
 	Expiration:   5 * time.Minute,
 	CookieName:   "session_id",
 	KeyGenerator: utils.UUID,
 })
 
 func LoginPost(c *fiber.Ctx) error {
-	var deger models.User
+	var data models.User
 
 	var temp models.Account
 
@@ -30,20 +30,37 @@ func LoginPost(c *fiber.Ctx) error {
 	if err != nil {
 		fmt.Println(err)
 	}
-	err = database.DB().Where("mail = ? and password = ?", temp.Mail, temp.Password).First(&deger).Error
+	err = database.DB().Where("mail = ? and password = ?", temp.Mail, temp.Password).First(&data).Error
+	if err != nil {
+		fmt.Println(err)
+		return c.Redirect("/down")
+	}
+	Sess, err := Store.Get(c)
 	if err != nil {
 		fmt.Println(err)
 	}
-	sess, err := store.Get(c)
-	if err != nil {
-		fmt.Println(err)
-	}
-	defer sess.Save()
-	sess.Set("deger", deger.Fullname)
-	sess.Get("deger")
-
+	defer Sess.Save()
+	Sess.Set("deger", data.Fullname)
+	Sess.Get("deger")
+	fmt.Println(Sess)
 	// session olusturulacak
 	//giris kontreolu yapılacak
 	//session yoketme olusturlacak
+	return c.Redirect("/")
+}
+
+// logaut ediliyor
+func Logout(c *fiber.Ctx) error {
+	sess, err := Store.Get(c)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(sess)
+	//eger session acık ise girilecek yer
+	// Destroy session
+	if err := sess.Destroy(); err != nil {
+		panic(err)
+	}
+
 	return c.Redirect("/")
 }
