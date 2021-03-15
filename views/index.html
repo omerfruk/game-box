@@ -46,33 +46,57 @@
           <li class="yesil"><a href="dashboard.html">Leaderboards</a></li>
           <li class="sari"><a href="hakkımızda.html">Hakkımızda</a></li>
           <ul class="giris1">
+            {{ if .Bool }}
+            <li>
+              <a href="/developer"
+                ><button type="button" class="btn btn-light">Account</button></a
+              >
+            </li>
+            <li>
+              <a href="/logout"
+                ><button type="button" class="btn btn-light">Logout</button></a
+              >
+            </li>
+            {{ else }}
             <li>
               <a href="/login"
-                ><button type="button" class="btn btn-light">Giriş</button></a
+                ><button type="button" class="btn btn-light">Log-in</button></a
               >
             </li>
             <li>
               <a href="/signup"
-                ><button type="button" class="btn btn-light">
-                  Kayıt Ol
-                </button></a
+                ><button type="button" class="btn btn-light">Sign-up</button></a
               >
             </li>
+            {{ end }}
           </ul>
         </ul>
       </nav>
       <div class="giris">
         <ul>
+          {{ if .Bool }}
           <li>
-            <a href="login.html"
-              ><button type="button" class="btn btn-light">Giriş</button></a
+            <a href="/developer"
+              ><button type="button" class="btn btn-light">Account</button></a
             >
           </li>
           <li>
-            <a href="signup.html"
-              ><button type="button" class="btn btn-light">Kayıt Ol</button></a
+            <a href="/logout"
+              ><button type="button" class="btn btn-light">Logout</button></a
             >
           </li>
+          {{ else }}
+          <li>
+            <a href="/login"
+              ><button type="button" class="btn btn-light">Log-in</button></a
+            >
+          </li>
+          <li>
+            <a href="/signup"
+              ><button type="button" class="btn btn-light">Sign-up</button></a
+            >
+          </li>
+          {{ end }}
         </ul>
       </div>
 
@@ -164,7 +188,7 @@
     <!-- footer  -->
     <footer>
       <div class="foot">
-        {{range $index,$data:=.}}
+        {{range $index,$data:=.Developer}}
         <div class="kartlar kartlar900">
           <div class="resim"><img src="{{$data.Imgsrc}}" alt="" /></div>
           <div class="bilgi">
