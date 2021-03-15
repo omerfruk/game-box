@@ -403,6 +403,7 @@ section {
   transform-style: preserve-3d;
   display: flex;
   flex-direction: row;
+  border-radius: 5% !important;
 
 }
 
@@ -427,6 +428,7 @@ section {
   width: 350px;
   height: 500px;
   object-fit: cover;
+  border-radius: 5%;
 }
 
 .card__face--back {
