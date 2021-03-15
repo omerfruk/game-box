@@ -11,6 +11,11 @@ const (
 	developer
 )
 
+type Islogin struct {
+	Developer []Developer
+	Bool      bool
+}
+
 type Account struct {
 	gorm.Model
 	Fullname  string    `json:"fullname"`
