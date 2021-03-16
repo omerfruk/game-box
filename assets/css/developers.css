@@ -1,0 +1,45 @@
+ .row{
+ padding: 0;
+ 
+ }
+  .birincil{
+    height: 450px; 
+    padding:0;
+   border-style: solid ;
+   
+}
+ .ikincil{
+    height: 450px;
+    padding:0;
+    border-style: solid;
+} 
+ .ucuncul{
+    height: 450px;
+    padding: 0;
+    text-align: center;
+    border-style: solid;
+   
+} 
+ .prof_jpg{
+    margin-left: 15px;
+    height: 150px;
+margin-top: 15px;
+text-align: left;
+}
+  .resim{
+    background-color:inherit !important;
+    border-radius: 50%;
+    width: 90px;
+    height: 125px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+ .abaoutme{
+    height: 55px;
+  
+ }
+.ozgecmis{
+ height: 55px;
+  
+   text-align: center;
+}
