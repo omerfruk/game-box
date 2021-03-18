@@ -18,13 +18,13 @@ func CreateUser(name string, mail string, pass string) {
 			Authority: 0,
 		},
 	}
-	err := database.DB().Where("fullname = ? ", temp.Fullname).First(&temp).Error
+	err := database.DB().Where("mail = ? ", temp.Mail).First(&temp).Error
 	if errors.Is(err, gorm.ErrRecordNotFound) {
 		err = database.DB().Create(&temp).Error
 		if err != nil {
 			fmt.Println(err)
+			fmt.Println("boyle bir kayit var")
 		}
-		fmt.Println("boyle bir kayit var")
 	}
 }
 func AddScore() {
