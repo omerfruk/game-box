@@ -8,7 +8,8 @@ import (
 	"gorm.io/gorm"
 )
 
-func CreateUser(name string, mail string, password string) {
+func CreateUser(name string, mail string, pass string) {
+	password := Sha256String(pass)
 	temp := models.User{
 		Account: models.Account{
 			Fullname:  name,
