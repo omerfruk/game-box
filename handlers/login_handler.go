@@ -7,6 +7,7 @@ import (
 	"github.com/gofiber/fiber/v2/utils"
 	"github.com/omerfruk/game-box/database"
 	"github.com/omerfruk/game-box/models"
+	"github.com/omerfruk/game-box/service"
 	"time"
 )
 
@@ -30,7 +31,8 @@ func LoginPost(c *fiber.Ctx) error {
 	if err != nil {
 		fmt.Println(err)
 	}
-	err = database.DB().Where("mail = ? and password = ?", temp.Mail, temp.Password).First(&data).Error
+	pass := service.Sha256String(temp.Password)
+	err = database.DB().Where("mail = ? and password = ?", temp.Mail, pass).First(&data).Error
 	if err != nil {
 		fmt.Println(err)
 		return c.Redirect("/down")
