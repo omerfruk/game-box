@@ -8,7 +8,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func CreateUser(name string, mail string, pass string) {
+func CreateUser(name string, mail string, pass string)  error{
 	password := Sha256String(pass)
 	temp := models.User{
 		Account: models.Account{
@@ -26,6 +26,7 @@ func CreateUser(name string, mail string, pass string) {
 			fmt.Println("boyle bir kayit var")
 		}
 	}
+	return err
 }
 func AddScore() {
 
