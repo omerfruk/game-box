@@ -1,0 +1,50 @@
+
+*{
+   margin: 0 ;
+   padding: 0 ;
+   list-style: none;
+}
+.wrapper{
+   width: 100% !important;
+}
+.kapsayici{
+   width: 100%;
+   padding: 100px 0;
+   text-align: center;
+   margin-bottom: 0,5em;
+}
+.devsec{
+   padding-top: 80px;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.devbox{
+  max-width:1300px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.kutu{
+   flex-basis:300px;
+   flex-shrink: 0;
+   flex-grow: 1;
+   text-align: center;
+   padding: 20px 0;
+   margin-right: 20px;
+   align-self: flex-start;
+   height: 400px;
+   border-width:5px;  
+   border-style:groove;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+
+.copyright {
+   text-align: center;
+   align-items: center;
+   position: relative;
+ }
+ 
