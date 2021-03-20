@@ -1,45 +1,50 @@
- .row{
- padding: 0;
- 
- }
-  .birincil{
-    height: 450px; 
-    padding:0;
-   border-style: solid ;
-   
+
+*{
+   margin: 0 ;
+   padding: 0 ;
+   list-style: none;
 }
- .ikincil{
-    height: 450px;
-    padding:0;
-    border-style: solid;
-} 
- .ucuncul{
-    height: 450px;
-    padding: 0;
-    text-align: center;
-    border-style: solid;
-   
-} 
- .prof_jpg{
-    margin-left: 15px;
-    height: 150px;
-margin-top: 15px;
-text-align: left;
+.wrapper{
+   width: 100% !important;
 }
-  .resim{
-    background-color:inherit !important;
-    border-radius: 50%;
-    width: 90px;
-    height: 125px;
-    transition: 0.6s;
-    cursor: pointer;
-}
- .abaoutme{
-    height: 55px;
-  
- }
-.ozgecmis{
- height: 55px;
-  
+.kapsayici{
+   width: 100%;
+   padding: 100px 0;
    text-align: center;
+   margin-bottom: 0,5em;
 }
+.devsec{
+   padding-top: 80px;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.devbox{
+  max-width:1300px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.kutu{
+   flex-basis:300px;
+   flex-shrink: 0;
+   flex-grow: 1;
+   text-align: center;
+   padding: 20px 0;
+   margin-right: 20px;
+   align-self: flex-start;
+   height: 400px;
+   border-width:5px;  
+   border-style:groove;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+
+.copyright {
+   text-align: center;
+   align-items: center;
+   position: relative;
+ }
+ 
