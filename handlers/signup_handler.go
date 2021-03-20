@@ -15,7 +15,10 @@ func SignupPost(c *fiber.Ctx) error {
 	if err != nil {
 		fmt.Println(err)
 	}
-	service.CreateUser(temp.Fullname, temp.Mail, temp.Password)
+	pass:=service.Sha256String(temp.Password)
+	if err =service.CreateUser(temp.Fullname, temp.Mail,pass);err !=nil{
+		fmt.Println(err)
+	}
 	return c.Redirect("/")
 }
 

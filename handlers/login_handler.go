@@ -58,7 +58,7 @@ func Logout(c *fiber.Ctx) error {
 		fmt.Println(err)
 	}
 	fmt.Println(sess)
-	//eger session acık ise girilecek yer
+	// eger session acık ise girilecek yer
 	// Destroy session
 	if err := sess.Destroy(); err != nil {
 		panic(err)
