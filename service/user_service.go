@@ -8,19 +8,12 @@ import (
 	"gorm.io/gorm"
 )
 
-func CreateUser(name string, mail string, pass string)  error{
-	password := Sha256String(pass)
-	temp := models.User{
-		Account: models.Account{
-			Fullname:  name,
-			Mail:      mail,
-			Password:  password,
-			Authority: 0,
-		},
-	}
-	err := database.DB().Where("mail = ? ", temp.Mail).First(&temp).Error
+func CreateUser(user models.User)  error{
+	password := Sha256String(user.Password)
+	user.Password=password
+	err := database.DB().Where("mail = ? ", user.Mail).First(&user).Error
 	if errors.Is(err, gorm.ErrRecordNotFound) {
-		err = database.DB().Create(&temp).Error
+		err = database.DB().Create(&user).Error
 		if err != nil {
 			fmt.Println(err)
 			fmt.Println("boyle bir kayit var")
