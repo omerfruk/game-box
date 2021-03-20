@@ -8,29 +8,18 @@ import (
 	"gorm.io/gorm"
 )
 
-func CreateDeveloper(name string, mail string, duty string, gitsrc string, instsrc string, linksrc string, imgsrc string) {
-
-	temp := models.Developer{
-		Account: models.Account{
-			Fullname:  name,
-			Mail:      mail,
-			Password:  "",
-			Authority: 1,
-		},
-		Duty:   duty,
-		Imgsrc: imgsrc,
-		Inssrc: instsrc,
-		Gitsrc: gitsrc,
-		Linkın: linksrc,
-	}
-	err := database.DB().Where("fullname = ?", temp.Fullname).First(&temp).Error
+func CreateDeveloper(developer models.Developer) {
+	err := database.DB().Where("fullname = ?", developer.Fullname).First(&developer).Error
 	if errors.Is(err, gorm.ErrRecordNotFound) {
-		err = database.DB().Create(&temp).Error
+		err = database.DB().Create(&developer).Error
 		if err != nil {
 			fmt.Println(err)
 		}
 		fmt.Println("boyle bir kayit var")
 	}
+}
+func DeleteDeveloper(developer models.Developer)  {
+	database.DB().Delete(&developer)
 }
 
 func GetAllDevelopers() []models.Developer {
