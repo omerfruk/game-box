@@ -18,7 +18,7 @@ func CreateDeveloper(developer models.Developer) {
 		fmt.Println("boyle bir kayit var")
 	}
 }
-func DeleteDeveloper(developer models.Developer)  {
+func DeleteDeveloper(developer models.Developer) {
 	database.DB().Delete(&developer)
 }
 
