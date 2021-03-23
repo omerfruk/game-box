@@ -17,4 +17,6 @@ func Router(app *fiber.App) {
 	app.Get("/login", handlers.LoginGet)
 	app.Post("/login", handlers.LoginPost)
 	app.Get("/logout", handlers.Logout)
+
+	app.Get("/developers", handlers.Developers)
 }
