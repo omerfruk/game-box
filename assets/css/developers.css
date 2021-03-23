@@ -1,46 +1,136 @@
- .row{
- padding: 0;
- margin: 30px 0px;
- 
- }
-  .birincil{
-    height: 450px; 
-    padding:0;
-   border-style: solid ;
+@import url(https://fonts.googleapis.com/css?family=Open+sans);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+
+}
+
+.container {
+   width: 100%;
+}
+
+.row {
+   width: 100vv;
    
 }
- .ikincil{
-    height: 450px;
-    padding:0;
-    border-style: solid;
-} 
- .ucuncul{
-    height: 450px;
-    padding: 0;
-    text-align: center;
-    border-style: solid;
-   
-} 
- .prof_jpg{
-    margin-left: 15px;
-    height: 150px;
-margin-top: 15px;
-text-align: left;
+
+.devsec {
+   padding-top: 80px;
+   padding-left: 0;
+   padding-right: 0;
 }
-  .resim{
-    background-color:inherit !important;
-    border-radius: 50%;
-    width: 90px;
-    height: 125px;
-    transition: 0.6s;
-    cursor: pointer;
-}
- .abaoutme{
-    height: 55px;
-  
- }
-.ozgecmis{
- height: 55px;
-  
+
+.copyright {
    text-align: center;
+   align-items: center;
+   position: relative;
 }
+
+
+.snip1515 {
+   font-family: 'Open Sans', Arial, sans-serif;
+   position: static;
+   margin: 20px 2.5%;
+   width: 315px;
+   color: #000000;
+   text-align: center;
+   line-height: 1.4em;
+   font-size: 14px;
+   box-shadow: none !important;
+   float: left;
+   
+}
+
+.snip1515 * {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.snip1515 .profile-image {
+   display: inline-block;
+   width: 80%;
+   z-index: 1;
+   position: relative;
+   padding: 10px;
+   border: 2px solid #e8b563;
+}
+
+.snip1515 .profile-image img {
+   width: 200px;
+   height: 200px;
+   vertical-align: top;
+}
+
+.snip1515 figcaption {
+   width: 100%;
+   background-color: #F2F2F2;
+   color: #555;
+   padding: 125px 25px 25px;
+   margin-top: -100px;
+   display: inline-block;
+}
+
+.snip1515 h3,
+.snip1515 h4,
+.snip1515 p {
+   margin: 0 0 5px;
+}
+
+.snip1515 h3 {
+   font-weight: 600;
+   font-size: 1.3em;
+   font-family: 'Playfair Display', Arial, sans-serif;
+}
+
+.snip1515 h4 {
+   color: #8c8c8c;
+   font-weight: 400;
+   letter-spacing: 2px;
+}
+
+.snip1515 p {
+   font-size: 0.9em;
+   letter-spacing: 1px;
+   opacity: 0.9;
+}
+
+.snip1515 .icons {
+   padding-top: 25px;
+   text-align: center;
+   width: 100%;
+}
+
+.snip1515 i {
+   padding: 15px 15px;
+   display: inline-block;
+   font-size: 20px;
+   font-weight: normal;
+   color: #e8b563;
+   opacity: 0.75;
+   border-radius: 50%;
+}
+
+.snip1515 .fa-instagram:hover{
+
+   color: rgb(207, 28, 58);
+   background-color: white;
+   transition: ease 0.7s;
+
+ }
+ .snip1515 .fa-linkedin:hover{
+   color: rgb(20, 118, 230);
+   background-color: white;
+   transition: ease 0.7s;
+
+ }
+ .snip1515 .fa-github:hover{
+   color: rgba(53, 53, 53, 0.932);
+   background-color: white;
+   transition: ease 0.7s;
+   
+ }
