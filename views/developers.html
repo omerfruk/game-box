@@ -56,86 +56,22 @@
   <!-- Body -->
   <section>
     <div class="container ">
-     <div class="row">
+     <div class="row">,
+       {{range $index,$deger:=.}}
           <figure class="snip1515">
-            <div class="profile-image"><img src="../img/developers/emrullah.jpg"
+            <div class="profile-image"><img src="{{.Imgsrc}}"
                 alt="sample47" /></div>
             <figcaption>
-              <h3>Emrullah Kutlar</h3>
-              <h4>Founder</h4>
+              <h3>{{.Account.Fullname}}</h3>
+              <h4>{{.Duty}}</h4>
               <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
-              <div class="icons"><a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"> <i class="fab fa-linkedin"></i></a>
-                <a href="#"> <i class="fab fa-github"></i></a>
+              <div class="icons"><a href="{{.Inssrc}}"><i class="fab fa-instagram"></i></a>
+                <a href="{{.Linkın}}"> <i class="fab fa-linkedin"></i></a>
+                <a href="{{.Gitsrc}}"> <i class="fab fa-github"></i></a>
               </div>
             </figcaption>
           </figure>
-          <figure class="snip1515">
-            <div class="profile-image"><img src="../img/developers/omer.jpg"
-                alt="sample83" /></div>
-            <figcaption>
-              <h3>Ömer Faruk Taşdemir</h3>
-              <h4>Web Designer</h4>
-              <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
-              <div class="icons"><a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"> <i class="fab fa-linkedin"></i></a>
-                <a href="#"> <i class="fab fa-github"></i></a>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure class="snip1515">
-            <div class="profile-image"><img src="../img/developers/serhat.jpg"
-                alt="sample70" /></div>
-            <figcaption>
-              <h3>Serhat Karakoca</h3>
-              <h4>Public Relations</h4>
-              <p>The only skills I have the patience to learn are those that have no real application in life. </p>
-              <div class="icons"><a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"> <i class="fab fa-linkedin"></i></a>
-                <a href="#"> <i class="fab fa-github"></i></a>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="snip1515">
-            <div class="profile-image"><img src="../img/developers/musa.jpg"
-                alt="sample70" /></div>
-            <figcaption>
-              <h3>Musa Yıldırım</h3>
-              <h4>Public Relations</h4>
-              <p>The only skills I have the patience to learn are those that have no real application in life. </p>
-              <div class="icons"><a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"> <i class="fab fa-linkedin"></i></a>
-                <a href="#"> <i class="fab fa-github"></i></a>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="snip1515">
-            <div class="profile-image"><img src="../img/developers/ibrahim.jpg"
-                alt="sample70" /></div>
-            <figcaption>
-              <h3>İbrahim Çakar</h3>
-              <h4>Public Relations</h4>
-              <p>The only skills I have the patience to learn are those that have no real application in life. </p>
-              <div class="icons"><a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"> <i class="fab fa-linkedin"></i></a>
-                <a href="#"> <i class="fab fa-github"></i></a>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="snip1515">
-            <div class="profile-image"><img src="../img/developers/osman.jpg"
-                alt="sample47" /></div>
-            <figcaption>
-              <h3>Osman Yılmaz</h3>
-              <h4>Founder</h4>
-              <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
-              <div class="icons"><a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"> <i class="fab fa-linkedin"></i></a>
-                <a href="#"> <i class="fab fa-github"></i></a>
-              </div>
-            </figcaption>
-          </figure>
+        {{end}}
       </div>
     </div>
   </section>
