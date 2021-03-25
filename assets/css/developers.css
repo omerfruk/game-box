@@ -19,18 +19,18 @@
    
 }
 
-.devsec {
-   padding-top: 80px;
-   padding-left: 0;
-   padding-right: 0;
-}
 
 .copyright {
+   height: 40px;
+   padding-top: 5px;
    text-align: center;
+   justify-content: center;
    align-items: center;
    position: relative;
 }
-
+.copyright p{
+   color: rgb(254, 254, 255);
+}
 
 .snip1515 {
    font-family: 'Open Sans', Arial, sans-serif;
@@ -58,6 +58,7 @@
    position: relative;
    padding: 10px;
    border: 2px solid #e8b563;
+   
 }
 
 .snip1515 .profile-image img {
@@ -110,7 +111,7 @@
    display: inline-block;
    font-size: 20px;
    font-weight: normal;
-   color: #e8b563;
+   color: #414141;
    opacity: 0.75;
    border-radius: 50%;
 }
@@ -133,4 +134,9 @@
    background-color: white;
    transition: ease 0.7s;
    
+ }
+ @media (max-width: 1170px) {
+    section{
+      padding-top: 30px;
+    }
  }
