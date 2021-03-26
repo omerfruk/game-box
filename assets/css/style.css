@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Stylish&family=Yeon+Sung&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Stylish&family=Yeon+Sung&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Anton&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Stylish&family=Yeon+Sung&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&family=Stylish&family=Yeon+Sung&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+sans);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 
 * {
   box-sizing: border-box;
@@ -9,8 +11,13 @@
 }
 
 body {
-  
-  background-color: #ececec !important;
+  width: auto;
+  height: auto;
+  background: url("../background/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 li,
@@ -20,7 +27,7 @@ button {
 }
 
 .top {
-  
+
   position: fixed;
   display: flex;
   width: 100%;
@@ -29,20 +36,11 @@ button {
   align-items: center;
   height: 70px;
   font-family: "Poppins", sans-serif;
-  background-color: rgb(255, 255, 255);
+  background: url("../background/bg.jpg");
   z-index: 10;
- 
+
 }
 
-.logo a {
-  color: rgb(180, 59, 59);
-  margin-top: 4px;
-  cursor: pointer;
-  font-size: 40px;
-}
-.logo a:hover {
-  color: rgb(180, 59, 59);
-}
 
 .top-nav ul {
   padding-top: 20px;
@@ -57,93 +55,168 @@ button {
 
 .top-nav a {
   display: block;
-  transition: all 0.3s case 0s;
-  color: rgb(200, 200, 200);
+  transition: all 0.5s ease;
+  color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.top-nav button{
-  color: rgb(200, 200, 200);
-}
+
 .mor a:hover {
   color: rgb(133, 0, 133);
 }
+
 .pembe a:hover {
   color: rgb(223, 99, 120);
 }
+
 .yesil a:hover {
   color: green;
 }
+
 .sari a:hover {
-  color: rgb(236, 236, 88);
+  color:yellow;
 }
 
 .menu-toggle {
   display: none;
 }
 
-.giris{
-  
+.giris {
+
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-.giris ul{
+
+.giris ul {
   padding-top: 20px;
   list-style: none;
-  
+
 }
+
 .giris ul li {
   display: inline-block;
   padding: 0px 20px;
 }
-.giris  a button {
- color: rgb(75, 75, 75);
+
+.giris a button {
+  color: rgb(8, 8, 8);
 }
-.giris1{
+
+.giris1 {
   display: none;
 }
+
+.glow-on-hover {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(240, 240, 240);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: rgb(240, 240, 240);
+
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(240, 240, 240);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
 @media (max-width: 1170px) {
- 
+
   .menu-toggle {
     text-align: center;
     display: block;
     width: 40px;
     height: 40px;
     margin: 10px;
-    background: rgb(255, 255, 255);
     cursor: pointer;
     text-align: center;
     font-size: 30px;
-    color: black;
+    color: rgb(240, 240, 240);
     padding-left: 50px !important;
     padding-right: 10px !important;
     position: sticky right;
     top: 10px;
     z-index: 10;
-    
+
   }
- 
+
 
   .menu-toggle:before {
     content: "\f0c9";
     font-family: fontAwesome;
     line-height: 40px;
-    transition:all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .menu-toggle.active:before {
     content: "\f00d";
     font-family: fontAwesome;
     line-height: 40px;
-    transition:all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .top-nav {
     display: none;
   }
 
-  .top-nav a{
-    color: rgb(200, 200, 200);
+  .top-nav a {
+    color: rgb(240, 240, 240);
   }
 
   .top-nav.active {
@@ -152,7 +225,7 @@ button {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
     top: 0px;
     right: 0px;
     display: block;
@@ -172,138 +245,157 @@ button {
     box-sizing: border-box;
     margin: 40px 0;
   }
-  .top-nav.active a:last-child{
+
+  .top-nav.active a:last-child {
     margin-bottom: 0px;
   }
-  .top-nav ul li:nth-child(4){
+
+  .top-nav ul li:nth-child(4) {
     padding-right: 20px !important;
   }
-  .giris{
+
+  .giris {
     display: none;
   }
- .giris1{
+
+  .giris1 {
     display: block;
     padding-right: 15px;
 
   }
-  .giris1 button{
-    color:black;
+
+  .giris1 button {
+    color: black;
   }
+
   .giris1 ul {
     padding-top: 20px;
     list-style: none;
   }
-  
+
   .giris1 ul li {
     display: inline-block;
     padding: 0px 20px;
   }
 }
 
-.btn{
-    border-radius: 20px !important;
-}
-.btn:first-child{
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-}
-                                     /* ***********************navbar bitimi************************/
-
-                                    /* ***********************footer baslangici************************/
-  .kartlar{
-    
-    justify-content:center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 200px;
-    float: left;
-  }
-  .bilgi{
-    padding-top: 15px;
-    color: lightgoldenrodyellow;
-  }
-  .bilgi p{
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-align: center;
-
-  }
-  .bilgi h5{
-    text-align: center;
-    font-size: 13px;
-  }
-  .social-icons {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .social-icon {
-    text-align: center;
-    padding-left: 5px;
-    display: inline;
-    color: #fff;
-  }
-
-  .social-icon a,
-  .social-icon .fab {
-    font-size: 18px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    color: lightgoldenrodyellow;
-    line-height: 50px;
-  }
-  .social-icon .fa-instagram:hover{
-    color: rgb(207, 28, 58);
-    background-color: white;
-    transition: ease 0.7s;
-
-  }
-  .social-icon .fa-linkedin:hover{
-    color: rgb(219, 59, 179);
-    background-color: white;
-    transition: ease 0.7s;
-
-  }
-  .social-icon .fa-github:hover{
-    color: rgba(132, 21, 206, 0.932);
-    background-color: white;
-    transition: ease 0.7s;
-    
-  }
-
-  .resim img{
-    background-color:inherit !important;
-    border-radius: 50%;
-    width: 125px;
-    height: 125px;
-    transition: 0.6s;
-    cursor: pointer;
-  }
-  .resim img:hover {
-    transform: scale(1.2);
-  }
-  
-  
-footer {
-
-  position: static;
-  height: 300px;
+.container {
+  padding-top: 50px;
   width: 100%;
-  background: rgb(79, 12, 141);
-  background: linear-gradient(90deg, rgba(204, 13, 13, 0.904)21%, rgb(214, 110, 13) 56%, rgb(206, 203, 16) 100%);
-  justify-content: space-between !important;
-  align-items: flex-start;
+
+}
+
+.row {
+  width: 100vv;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  padding-top: 80px;
+  height: auto;
+
+
+
+}
+
+
+/* ***********************navbar bitimi************************/
+
+/* ***********************footer baslangici************************/
+.kartlar {
+
+  justify-content: center;
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  float: left;
+}
+
+.bilgi {
+  padding-top: 15px;
+  color: lightgoldenrodyellow;
+}
+
+.bilgi p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.bilgi h5 {
+  text-align: center;
+  font-size: 13px;
+}
+
+.social-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon {
+  text-align: center;
+  padding-left: 5px;
+  display: inline;
+  color: #fff;
+}
+
+.social-icon a,
+.social-icon .fab {
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  color: lightgoldenrodyellow;
+  line-height: 50px;
+}
+
+.social-icon .fa-instagram:hover {
+  color: rgb(207, 28, 58);
+  background-color: white;
+  transition: ease 0.7s;
+
+}
+
+.social-icon .fa-linkedin:hover {
+  color: rgb(20, 118, 230);
+  background-color: white;
+  transition: ease 0.7s;
+
+}
+
+.social-icon .fa-github:hover {
+  color: rgba(132, 21, 206, 0.932);
+  background-color: white;
+  transition: ease 0.7s;
+
+}
+
+.resim img {
+  background-color: inherit !important;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.resim img:hover {
+  transform: scale(1.2);
+}
+
+
+footer {
+  height: auto;
 
 }
 
 .foot {
-  background: rgb(79, 12, 141);
-  background: linear-gradient(90deg, rgba(204, 13, 13, 0.904)21%, rgb(214, 110, 13) 56%, rgb(206, 203, 16) 100%);
   justify-content: space-between !important;
   align-items: flex-start;
   display: flex;
@@ -314,7 +406,8 @@ footer {
 .copy {
   text-align: center;
   align-items: center;
-  position: relative;
+
+
 
 }
 
@@ -322,50 +415,48 @@ footer {
   font-size: 14px;
   font-weight: 400;
   line-height: 40px;
-  color: #555;
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 1170px) {
   footer {
 
-      position: static;
-      height: 900px;
-      width: 100%;
-      background: rgb(79, 12, 141);
-      background: linear-gradient(90deg, rgba(204, 13, 13, 0.904)21%, rgb(214, 110, 13) 56%, rgb(206, 203, 16) 100%);
-      justify-content: space-between !important;
-      align-items: flex-start;
-      display: flex;
+    position: static;
+    height: 900px;
+    width: 100%;
+    justify-content: space-between !important;
+    align-items: flex-start;
+    display: flex;
 
 
   }
 
   .foot {
-      justify-content: space-between !important;
-      align-items: flex-start;
-      display: block;
-      width: 100%;
+    justify-content: space-between !important;
+    align-items: flex-start;
+    display: block;
+    width: 100%;
   }
 
   .rights {
-    
-      padding-top: 880px;
+
+    padding-top: 880px;
   }
 
   .kartlar {
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      height: 300px;
-      width: 200px;
-      float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    float: left;
   }
 
   .kartlar900 {
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
@@ -374,38 +465,39 @@ footer {
 
 
 /*******************  oyun Kartları baslangici **********************/
-section {
-  padding-top: 80px;
-  padding-left: 10%;
-  padding-right: 10%;
-  
-  }
 
-.scene {
-  padding-top: 50px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  perspective: 800px;
-  
-}
+
+
 
 .card {
 
   position: relative;
-  width: 350px;
-  height: 500px;
-  margin-bottom: 200px !important;
-  color: white;
-  cursor: pointer;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 175px !important;
   transition: 0.75s ease-in-out;
   transform-style: preserve-3d;
+  cursor: pointer;
   display: flex;
-  flex-direction: row;
   border-radius: 5% !important;
+  float: left;
+  margin-right: 80px;
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
 
+
+}
+
+.card:first-child,
+.card:nth-child(5) {
+  margin-left: 50px;
 }
 
 .card:hover {
@@ -419,91 +511,159 @@ section {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  transition:  0.75s ease-in-out;
+  transition: 0.75s ease-in-out;
   -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
   display: flex;
   flex-direction: row;
+
+
+
+
 }
 
 .card img {
-  width: 350px;
-  height: 500px;
+  width: 200px;
+  height: 250px;
   object-fit: cover;
   border-radius: 5%;
 }
 
 .card__face--back {
   transform: rotateY(0.5turn);
-}
-.play{
 
-align-items: center;
-text-align: center;
 }
-.play p{
- 
-  font-size: 30px;
-  color: black;
+
+.play-name {
+  margin-top: -250px;
 }
-.play button{
- 
+
+.play {
+  font-family:'Courier New', Courier, monospace;  
+  align-items: center;
+  text-align: center;
+}
+
+.play p {
+   font-weight: 300;
+   font-size: 1.3em;
+   font-family: 'Playfair Display', Arial, sans-serif;
+}
+
+.play-bttn {
+  position: relative;
+  margin-top: 162px;
+}
+
+.play button {
+  color: #000000;
   width: 80%;
   letter-spacing: 2px;
-  font-size: 20px;
-  
+  font-size: 15px;
+
 }
+.btn {
+  
+  background: rgb(230, 230, 230);
+  opacity: 0.8;
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow:hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+
 @media (max-width: 1170px) {
 
   .card {
 
-      position: relative;
-      width: 300px;
-      height: 450px;
-      margin-bottom: 175px !important;
-      color: white;
-      cursor: pointer;
-      transition: 0.75s ease-in-out;
-      transform-style: preserve-3d;
-      display: flex;
-      flex-direction: column;
-      
-      
-  
+    position: relative;
+    width: 250px;
+    height: 400px;
+    margin-bottom: 175px !important;
+    cursor: pointer;
+    transition: 0.75s ease-in-out;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+
   }
+
+  .card:first-child,
+  .card:nth-child(5) {
+    margin-left: 0px;
+  }
+
   .scene {
-      padding-top: 100px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      perspective: 800px;
-      flex-direction: column;
-      
-      
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    perspective: 800px;
+    flex-direction: column;
+
+
   }
+
   .card img {
-      width: 300px ; 
-      height: 450px ;
-      object-fit: cover;
-      display: flex;
-      flex-direction: column;
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
   }
+
   .card__face {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      transition:  0.75s ease-in-out;
-      -webkit-box-reflect: unset;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: 0.75s ease-in-out;
+    -webkit-box-reflect: unset;
   }
+
   .card:hover {
-      transform: none;
+    transform: none;
   }
-  
+
   .card__face--back {
-      transform: none;
+    transform: none;
+  }
+
+  .play-name {
+    margin-top: -400px;
+  }
+
+  .play-bttn {
+    margin-top: 320px;
   }
 }
+
 /*******************  oyun Kartları bitimi **********************/
