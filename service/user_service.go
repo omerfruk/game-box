@@ -18,6 +18,7 @@ func CreateUser(name string, mail string, password string) {
 		},
 	}
 	err := database.DB().Where("fullname = ? ", temp.Fullname).First(&temp).Error
+	temp.Password = Sha256String(temp.Password)
 	if errors.Is(err, gorm.ErrRecordNotFound) {
 		err = database.DB().Create(&temp).Error
 		if err != nil {
