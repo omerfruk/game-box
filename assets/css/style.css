@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Stylish&family=Yeon+Sung&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Stylish&family=Yeon+Sung&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Anton&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Stylish&family=Yeon+Sung&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&family=Stylish&family=Yeon+Sung&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+sans);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 
 * {
   box-sizing: border-box;
@@ -71,7 +73,7 @@ button {
 }
 
 .sari a:hover {
-  color: rgb(236, 236, 88);
+  color:yellow;
 }
 
 .menu-toggle {
@@ -296,8 +298,6 @@ section {
 
 
 }
-
-.backg {}
 
 
 /* ***********************navbar bitimi************************/
@@ -538,15 +538,15 @@ footer {
 }
 
 .play {
-
+  font-family:'Courier New', Courier, monospace;  
   align-items: center;
   text-align: center;
 }
 
 .play p {
-
-  font-size: 25px;
-  color: rgb(2, 1, 1);
+   font-weight: 300;
+   font-size: 1.3em;
+   font-family: 'Playfair Display', Arial, sans-serif;
 }
 
 .play-bttn {
@@ -561,6 +561,40 @@ footer {
   font-size: 15px;
 
 }
+.btn {
+  
+  background: rgb(230, 230, 230);
+  opacity: 0.8;
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow:hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
 
 @media (max-width: 1170px) {
 
