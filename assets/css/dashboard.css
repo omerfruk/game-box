@@ -4,13 +4,10 @@
   padding: 0;
 }
 
-body {
-
-}
 
 h1 {
   font-size: 30px;
-  color: #fff;
+  color: #fff !important;
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
@@ -56,9 +53,7 @@ body {
   background: linear-gradient(to right, #25c481, #25b7c4);
   font-family: "Roboto", sans-serif;
 }
-section {
- 
-}
+
 
 /* follow me template */
 .made-with-love {

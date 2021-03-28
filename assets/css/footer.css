@@ -1,0 +1,159 @@
+/* ***********************footer baslangici************************/
+.kartlar {
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    float: left;
+  }
+  
+  .bilgi {
+    padding-top: 15px;
+    color: lightgoldenrodyellow;
+  }
+  
+  .bilgi p {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+  
+  }
+  
+  .bilgi h5 {
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-icon {
+    text-align: center;
+    padding-left: 5px;
+    display: inline;
+    color: #fff;
+  }
+  
+  .social-icon a,
+  .social-icon .fab {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: lightgoldenrodyellow;
+    line-height: 50px;
+  }
+  
+  .social-icon .fa-instagram:hover {
+    color: rgb(207, 28, 58);
+    background-color: white;
+    transition: ease 0.7s;
+  
+  }
+  
+  .social-icon .fa-linkedin:hover {
+    color: rgb(20, 118, 230);
+    background-color: white;
+    transition: ease 0.7s;
+  
+  }
+  
+  .social-icon .fa-github:hover {
+    color: rgba(132, 21, 206, 0.932);
+    background-color: white;
+    transition: ease 0.7s;
+  
+  }
+  
+  .resim img {
+    background-color: inherit !important;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    transition: 0.6s;
+    cursor: pointer;
+  }
+  
+  .resim img:hover {
+    transform: scale(1.2);
+  }
+  
+  
+  footer {
+    height: auto;
+  
+  }
+  
+  .foot {
+    justify-content: space-between !important;
+    align-items: flex-start;
+    display: flex;
+    padding: 0px 5px;
+  
+  }
+  
+  .copy {
+    text-align: center;
+    align-items: center;
+  
+  
+  
+  }
+  
+  .copy p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+  }
+  
+  @media (max-width: 1170px) {
+    footer {
+  
+      position: static;
+      height: 900px;
+      width: 100%;
+      justify-content: space-between !important;
+      align-items: flex-start;
+      display: flex;
+  
+  
+    }
+  
+    .foot {
+      justify-content: space-between !important;
+      align-items: flex-start;
+      display: block;
+      width: 100%;
+    }
+  
+    .rights {
+  
+      padding-top: 880px;
+    }
+  
+    .kartlar {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      width: 200px;
+      float: left;
+    }
+  
+    .kartlar900 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* ***********************footer bitimi************************/
