@@ -20,6 +20,12 @@ func SignupPost(c *fiber.Ctx) error {
 }
 
 func SignupGet(c *fiber.Ctx) error {
-
+	Sess, err := Store.Get(c)
+	if err != nil {
+		fmt.Println(err)
+	}
+	if Sess.Fresh() != true {
+		return c.Redirect("/")
+	}
 	return c.Render("signup", true)
 }
