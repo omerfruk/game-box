@@ -12,12 +12,18 @@ import (
 )
 
 func LoginGet(c *fiber.Ctx) error {
-
+	Sess, err := Store.Get(c)
+	if err != nil {
+		fmt.Println(err)
+	}
+	if Sess.Fresh() != true {
+		return c.Redirect("/")
+	}
 	return c.Render("login", true)
 }
 
 var Store = session.New(session.Config{
-	Expiration:   5 * time.Minute,
+	Expiration:   24 * 365 * time.Hour,
 	CookieName:   "session_id",
 	KeyGenerator: utils.UUID,
 })
@@ -42,8 +48,8 @@ func LoginPost(c *fiber.Ctx) error {
 		fmt.Println(err)
 	}
 	defer Sess.Save()
-	Sess.Set("deger", data.Fullname)
-	Sess.Get("deger")
+	Sess.Set("name", data.Fullname)
+	Sess.Set("idsi", data.ID)
 	fmt.Println(Sess)
 	// session olusturulacak
 	//giris kontreolu yapılacak
