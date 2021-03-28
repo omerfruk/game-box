@@ -50,10 +50,7 @@ func LoginPost(c *fiber.Ctx) error {
 	defer Sess.Save()
 	Sess.Set("name", data.Fullname)
 	Sess.Set("idsi", data.ID)
-	fmt.Println(Sess)
-	// session olusturulacak
-	//giris kontreolu yapılacak
-	//session yoketme olusturlacak
+
 	return c.Redirect("/")
 }
 
