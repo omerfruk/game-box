@@ -38,3 +38,28 @@ func GetAllDevelopers() []models.Developer {
 	database.DB().Find(&temp)
 	return temp
 }
+
+func UpdateDevelopers(developer models.Developer) models.Developer {
+	temp := models.Developer{
+		Account: models.Account{
+			Fullname:  developer.Fullname,
+			Mail:      developer.Mail,
+			Password:  developer.Password,
+			Authority: 1,
+		},
+		Duty:   developer.Duty,
+		Imgsrc: developer.Imgsrc,
+		Inssrc: developer.Inssrc,
+		Gitsrc: developer.Gitsrc,
+		Linkın: developer.Gitsrc,
+	}
+	return temp
+}
+
+func DeleteDeveloper(id string) {
+	var developer models.Developer
+	err := database.DB().Where("id = ?", id).Delete(&developer).Error
+	if errors.Is(err, gorm.ErrRecordNotFound) {
+		fmt.Println("boyle bir kayit bulunamadi")
+	}
+}
