@@ -3,7 +3,7 @@
  <header class="top">
     <div class="logo">
       <a href="/index">
-        <img src="../assets/logo/Logo.png" alt="" /></a>
+        <img src="../assets/logo/Logo.png" alt="" href="/" /></a>
     </div>
 
     <nav class="top-nav">
@@ -12,12 +12,12 @@
           <a href="/" style="color: rgb(133, 0, 133)">Ana Sayfa</a>
         </li>
         <li class="pembe"><a href="demo">Oyunlar</a></li>
-        <li class="yesil"><a href="dashboard">Leaderboards</a></li>
+        <li class="yesil"><a href="/account/dashboard">Leaderboards</a></li>
         <li class="sari"><a href="hakkımızda">Hakkımızda</a></li>
         <ul class="giris1">
           {{ if .Bool }}
           <li>
-            <a href="/developer"><button type="button" class="glow-on-hover">Account</button></a>
+            <a href="/account/developer"><button type="button" class="glow-on-hover">Account</button></a>
           </li>
           <li>
             <a href="/logout"><button type="button" class="glow-on-hover">Logout</button></a>
@@ -37,7 +37,7 @@
       <ul>
         {{ if .Bool }}
         <li>
-          <a href="/developer"><button type="button" class="glow-on-hover">Account</button></a>
+          <a href="/account/developer"><button type="button" class="glow-on-hover">Account</button></a>
         </li>
         <li>
           <a href="/logout"><button type="button" class="glow-on-hover">Logout</button></a>
