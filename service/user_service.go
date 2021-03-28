@@ -27,6 +27,38 @@ func CreateUser(name string, mail string, password string) {
 		fmt.Println("boyle bir kayit var")
 	}
 }
-func AddScore() {
 
+func GetUser(id string) models.User {
+	var temp models.User
+	err := database.DB().Where("id = ?", id).Find(&temp).Error
+	if errors.Is(err, gorm.ErrRecordNotFound) {
+		fmt.Println("boyle bi kullanici yok")
+	}
+	return temp
+}
+
+func AddScore(score models.Score, id string) {
+	temp := GetUser(id)
+	temp.ScoreID = &score.ID
+}
+func DeleteUser(id string) {
+	var temp models.User
+	err := database.DB().Where("id = ?", id).Delete(&temp).Error
+	if errors.Is(err, gorm.ErrRecordNotFound) {
+
+	}
+}
+
+func UpdateUser(user models.User) models.User {
+	temp := models.User{
+		Account: models.Account{
+			Fullname:  user.Fullname,
+			Mail:      user.Mail,
+			Password:  user.Password,
+			Authority: 0,
+		},
+		ScoreID: nil,
+		Score:   models.Score{},
+	}
+	return temp
 }
