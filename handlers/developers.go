@@ -19,7 +19,7 @@ func Developers(c *fiber.Ctx) error {
 	if errors.Is(err, gorm.ErrRecordNotFound) {
 		fmt.Println(err)
 	}
-	d := models.Islogin{
+	d := models.Islogins{
 		Developer: temp,
 		Bool:      !sess.Fresh(),
 	}
