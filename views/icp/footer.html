@@ -3,7 +3,7 @@
     <div class="foot">
       {{range $index,$data:=.Developer}}
       <div class="kartlar kartlar900">
-        <div class="resim"><img src="{{$data.Imgsrc}}" alt="" /></div>
+        <div class="resim"><a href="/developer/{{$data.ID}}"><img src="{{$data.Imgsrc}}" alt="" /></a></div>
         <div class="bilgi">
           <p>{{$data.Fullname}}</p>
           <h5>{{$data.Duty}}</h5>
