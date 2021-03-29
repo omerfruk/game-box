@@ -20,13 +20,13 @@ func Router(app *fiber.App) {
 	app.Get("/logout", handlers.Logout)
 	//developers yönlendiricisi
 	app.Get("/developers", handlers.Developers)
-
+	app.Get("/developer/:key", handlers.DeveloperGet)
 	//session kontrol
 	add := app.Group("/account", sessionControl)
 	//dashboard yonlendiricisi
 	add.Get("/dashboard", handlers.DashboardGet)
 	//developer yönlendirici
-	add.Get("/developer", handlers.Developers)
+	//add.Get("/developer/:key", handlers.DeveloperGet)
 }
 func sessionControl(c *fiber.Ctx) error {
 	sess, err := handlers.Store.Get(c)
