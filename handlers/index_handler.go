@@ -13,7 +13,7 @@ func IndexGet(c *fiber.Ctx) error {
 	if err != nil {
 		fmt.Println(err)
 	}
-	a := models.Islogin{
+	a := models.Islogins{
 		Developer: tempDevelopers,
 		Bool:      !sess.Fresh(),
 	}
