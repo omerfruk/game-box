@@ -11,3 +11,17 @@ hide.addEventListener("click", () => {
     userscore.classList.toggle("inform");
     form.classList.toggle("inform");
   });
+
+  var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Sanırım Yanlış Bir Tuşa Bastın. Birdaha Dene 😉");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;

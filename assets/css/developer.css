@@ -105,7 +105,18 @@ body{
 .edit{
     cursor: pointer;
 }
-
-@media (max-width: 1170px) {
-
+.delete{
+    
 }
+
+.copyright {
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ }
+ .copyright p{
+    color: rgb(254, 254, 255);
+ }
