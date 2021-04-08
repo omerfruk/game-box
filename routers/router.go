@@ -21,6 +21,7 @@ func Router(app *fiber.App) {
 	//developers yönlendiricisi
 	app.Get("/developers", handlers.Developers)
 	app.Get("/developer/:key", handlers.DeveloperGet)
+	app.Get("/account/:key", handlers.GetAccount)
 	//session kontrol
 	add := app.Group("/account", sessionControl)
 	//dashboard yonlendiricisi
