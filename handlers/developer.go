@@ -25,5 +25,5 @@ func DeveloperGet(c *fiber.Ctx) error {
 		Developer: temp,
 		Bool:      !sess.Fresh(),
 	}
-	return c.Render("developer", d)
+	return c.Render("account", d)
 }
