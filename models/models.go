@@ -25,6 +25,7 @@ type Account struct {
 	gorm.Model
 	Fullname  string    `json:"fullname"`
 	Mail      string    `json:"mail"`
+	Username  string    `json:"user_name"`
 	Password  string    `json:"password"`
 	Authority Authority `json:"authority"`
 }
