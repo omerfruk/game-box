@@ -21,7 +21,7 @@
 <body>
   <header class="top">
     <div class="logo">
-      <a href="/index">
+      <a href="/">
         <img src="../assets/logo/Logo.png" alt="" href="/" /></a>
     </div>
 
@@ -83,8 +83,8 @@
               <div class="d-flex flex-column align-items-center text-center ">
                 <img src="../img/developers/emrullah.jpg" alt="Admin" class="rounded-circle" width="150">
                 <div class="mt-3">
-                  <h4>Emrullah Kutlar</h4>
-                  <p class="text-secondary mb-1">Developer</p>
+                  <h4>{{.Fullname}}</h4>
+                  <p class="text-secondary mb-1"></p>
                 </div>
                 <div class="editter edit "><i class="fas fa-edit"></i></div>
               </div>
@@ -96,7 +96,7 @@
                     <h6 class="mb-0">Full Name</h6>
                   </div>
                   <div class="col-sm-6 text-dark">
-                    Emrullah Kutlar
+                    {{.Fullname}}
                   </div>
                 </div>
                 <hr>
@@ -105,7 +105,7 @@
                     <h6 class="mb-0">User Name</h6>
                   </div>
                   <div class="col-sm-6 text-dark">
-                    4N4F0R
+                    {{.Username}}
                   </div>
                 </div>
                 <hr>
@@ -114,18 +114,18 @@
                     <h6 class="mb-0">E-mail</h6>
                   </div>
                   <div class="col-sm-6 text-dark">
-                    djsandaknsd@gmail.com
+                    {{.Mail}}
                   </div>
                 </div>
                 <hr>
-                <div class="row">
+                <!--<div class="row">
                   <div class="col-sm-3">
                     <h6 class="mb-0">Password</h6>
                   </div>
                   <div class="col-sm-6 text-dark">
                     *******************
                   </div>
-                </div>
+                </div>-->
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
