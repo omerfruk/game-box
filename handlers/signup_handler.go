@@ -11,19 +11,15 @@ import (
 func SignupPost(c *fiber.Ctx) error {
 	var temp models.User
 	err := c.BodyParser(&temp)
-	fmt.Println(temp.Mail)
 	if err != nil {
 		fmt.Println(err)
 	}
-	service.CreateUser(temp.Fullname, temp.Username, temp.Mail, temp.Password)
+	service.CreateUser(temp)
 	return c.Redirect("/")
 }
 
 func SignupGet(c *fiber.Ctx) error {
-	Sess, err := Store.Get(c)
-	if err != nil {
-		fmt.Println(err)
-	}
+	Sess := service.GetSesion(c)
 	if Sess.Fresh() != true {
 		return c.Redirect("/")
 	}
