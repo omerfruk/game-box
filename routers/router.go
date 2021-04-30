@@ -18,6 +18,8 @@ func Router(app *fiber.App) {
 	app.Get("/login", handlers.LoginGet)
 	app.Post("/login", handlers.LoginPost)
 	app.Get("/logout", handlers.Logout)
+	//oyunsayfsanina yönlendirme
+	app.Get("/game/snake", handlers.SnakeGame)
 	//developers yönlendiricisi
 	app.Get("/developers", handlers.Developers)
 	app.Get("/developer/:key", handlers.DeveloperGet)
