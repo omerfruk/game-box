@@ -30,9 +30,9 @@
         <li class="mor">
           <a href="/" style="color: rgb(133, 0, 133)">Ana Sayfa</a>
         </li>
-        <li class="pembe"><a href="demo">Oyunlar</a></li>
+        <li class="pembe"><a href="/game/snake">Oyunlar</a></li>
         <li class="yesil"><a href="/account/dashboard">Leaderboards</a></li>
-        <li class="sari"><a href="hakkimizda">Hakkımızda</a></li>
+        <li class="sari"><a href="/developers">Hakkımızda</a></li>
         <ul class="giris1">
           {{ if .Bool }}
           <li>
@@ -83,7 +83,7 @@
               <div class="d-flex flex-column align-items-center text-center ">
                 <img src="../img/developers/emrullah.jpg" alt="Admin" class="rounded-circle" width="150">
                 <div class="mt-3">
-                  <h4>{{.Fullname}}</h4>
+                  <h4>{{account.Fullname}}</h4>
                   <p class="text-secondary mb-1"></p>
                 </div>
                 <div class="editter edit "><i class="fas fa-edit"></i></div>
@@ -96,7 +96,7 @@
                     <h6 class="mb-0">Full Name</h6>
                   </div>
                   <div class="col-sm-6 text-dark">
-                    {{.Fullname}}
+                    {{account.Fullname}}
                   </div>
                 </div>
                 <hr>
@@ -105,7 +105,7 @@
                     <h6 class="mb-0">User Name</h6>
                   </div>
                   <div class="col-sm-6 text-dark">
-                    {{.Username}}
+                    {{account.Username}}
                   </div>
                 </div>
                 <hr>
@@ -114,7 +114,7 @@
                     <h6 class="mb-0">E-mail</h6>
                   </div>
                   <div class="col-sm-6 text-dark">
-                    {{.Mail}}
+                    {{account.Mail}}
                   </div>
                 </div>
                 <hr>
