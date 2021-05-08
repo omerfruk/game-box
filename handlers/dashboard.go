@@ -7,5 +7,8 @@ import (
 
 func DashboardGet(c *fiber.Ctx) error {
 	developers := service.GetDeveloperAll()
-	return c.Render("dashboard", developers)
+	return c.Render("leaderboard", fiber.Map{
+		"Developers": developers,
+		"Boll":       true,
+	})
 }
