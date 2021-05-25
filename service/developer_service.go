@@ -37,7 +37,7 @@ func GetDeveloperById(id uint) models.Developer {
 	var temp models.Developer
 	err := database.DB().Where("ID = ? ", id).First(&temp).Error
 	if errors.Is(err, gorm.ErrRecordNotFound) {
-		fmt.Println("boyle bi kayıt yok ")
+		fmt.Println("boyle bi kayit yok ")
 	}
 	return temp
 }
