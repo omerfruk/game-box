@@ -8,13 +8,13 @@ import (
 	"gorm.io/gorm"
 )
 
-func CreateUser(name string, username string, mail string, password string) {
+func CreateUser(gelen models.User) {
 	temp := models.User{
 		Account: models.Account{
-			Fullname:  name,
-			Mail:      mail,
-			Username:  username,
-			Password:  password,
+			Fullname:  gelen.Fullname,
+			Mail:      gelen.Mail,
+			Username:  gelen.Username,
+			Password:  gelen.Password,
 			Authority: 0,
 		},
 	}

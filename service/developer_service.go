@@ -33,13 +33,8 @@ func CreateDeveloper(name string, mail string, duty string, gitsrc string, insts
 	}
 }
 
-func GetAllDevelopers() []models.Developer {
-	var temp []models.Developer
-	database.DB().Find(&temp)
-	return temp
-}
-func GetDeveloperById(id uint) models.Account {
-	var temp models.Account
+func GetDeveloperById(id uint) models.Developer {
+	var temp models.Developer
 	err := database.DB().Where("ID = ? ", id).First(&temp).Error
 	if errors.Is(err, gorm.ErrRecordNotFound) {
 		fmt.Println("boyle bi kayıt yok ")
