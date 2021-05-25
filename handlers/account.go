@@ -10,7 +10,7 @@ func GetAccount(c *fiber.Ctx) error {
 	id, _ := strconv.ParseUint(c.Params("key"), 10, 32)
 	account := service.GetDeveloperById(uint(id))
 	return c.Render("account", fiber.Map{
-		"account": account,
+		"Account": account,
 		"Bool":    true,
 	})
 }
