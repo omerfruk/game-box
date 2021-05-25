@@ -12,19 +12,19 @@ func Router(app *fiber.App) {
 
 	app.Get("/", handlers.IndexGet)
 
-	//signup post ve get metodlari
+	//signup post ve get metodlari yonlendirmesi
 	app.Get("/signup", handlers.SignupGet)
 	app.Post("/signup", handlers.SignupPost)
 
-	//login yonlendirmesi
+	//login sayfasi yonlendirmesi
 	app.Get("/login", handlers.LoginGet)
 	app.Post("/login", handlers.LoginPost)
 	app.Get("/logout", handlers.Logout)
 
-	//oyunsayfsanina yönlendirme
+	//oyun sayfasina yönlendirme
 	app.Get("/game/snake", handlers.SnakeGame)
 
-	//developers yönlendiricisi
+	//developers sayfasina yönlendiricisi
 	app.Get("/developers", handlers.Developers)
 	app.Get("/developer/:key", handlers.DeveloperGet)
 	app.Get("/account/:key", handlers.GetAccount)
