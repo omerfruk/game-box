@@ -3,6 +3,8 @@ let cellSize = 400 / cellsNo
 let difficulty = 1
 
 let score = 0
+var highscore = 0;
+var localStorage = localStorage;
 
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
@@ -10,6 +12,8 @@ const ctx = canvas.getContext('2d')
 const btnStart = document.querySelector('.btn-start')
 const btnPause = document.querySelector('.btn-pause')
 const scoreVal = document.querySelector('.score_val')
+const hs = document.querySelector('#highscore')
+
 
 
 let direction
@@ -34,6 +38,7 @@ let state
 let flash = false
 let lastKeyPressed
 
+
 function update() {
 	tick = Date.now()
 	
@@ -57,12 +62,20 @@ function update() {
 	}
 	
 	if (headMeetsFood()) {
+
 		needsGrowth = true
 		food = null
 		putFood()
 		setScore(score + difficulty)
+		hs.textContent = highscore
+		if (score > highscore) {
+			highscore = score;
+			localStorage.setItem("highscore", highscore);
+		 }
+	
 	}
 }
+
 
 function foodTreshold() {
 	return (5000 / difficulty) * cellsNo
@@ -182,7 +195,10 @@ function fillCell(x, y) {
 
 function setScore(next) {
 	score = next
+	
 	scoreVal.textContent = score
+	
+	
 }
 
 function startGame() {
@@ -199,12 +215,12 @@ function startGame() {
 	snake = [startX, startX+1, startX+2, startX+3].map(
 		x => ({x, y: 15})
 	)
+	
 }
 
 function loop() {
 	requestAnimationFrame(loop)
 	draw()
-	
 	if (paused) return
 	update()
 }
