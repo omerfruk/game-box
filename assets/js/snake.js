@@ -3,8 +3,8 @@ let cellSize = 400 / cellsNo
 let difficulty = 1
 
 let score = 0
-var highscore = 0;
-var localStorage = localStorage;
+var highscore = 0
+var localStorage = localStorage
 
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
@@ -21,7 +21,15 @@ const DIR = {
 	LEFT: 37,
 	UP: 38,
 	RIGHT: 39,
-	DOWN: 40
+	DOWN: 40,
+
+}
+const DIR2 = {
+	LEFT: 65,
+	UP: 87,
+	RIGHT: 68,
+	DOWN: 83,
+	
 }
 
 // ctx.strokeStyle = '#616161'
@@ -41,7 +49,7 @@ let lastKeyPressed
 
 function update() {
 	tick = Date.now()
-	
+	hs.textContent = highscore
 	
 	if (hasCollisions()) {
 		flash = true
@@ -67,7 +75,7 @@ function update() {
 		food = null
 		putFood()
 		setScore(score + difficulty)
-		hs.textContent = highscore
+		
 		if (score > highscore) {
 			highscore = score;
 			localStorage.setItem("highscore", highscore);
@@ -116,6 +124,19 @@ function moveSnake() {
 		case DIR.DOWN:
 			++next.y;
 			break;
+		case DIR2.LEFT:
+			--next.x;
+			break;
+		case DIR2.UP:
+			--next.y;
+			break;
+		case DIR2.RIGHT:
+			++next.x;
+			break;
+		case DIR2.DOWN:
+			++next.y;
+			break;
+		
 	}
 	
 	if (next.x >= cellsNo) next.x = 0
@@ -242,6 +263,10 @@ function onKeyDown({keyCode}) {
 		case (keyCode === DIR.UP && direction === DIR.DOWN):	
 		case (keyCode === DIR.LEFT && direction === DIR.RIGHT):
 		case (keyCode === DIR.RIGHT && direction === DIR.LEFT):
+		case (keyCode === DIR2.DOWN && direction === DIR2.UP):
+		case (keyCode === DIR2.UP && direction === DIR2.DOWN):	
+		case (keyCode === DIR2.LEFT && direction === DIR2.RIGHT):
+		case (keyCode === DIR2.RIGHT && direction === DIR2.LEFT):
 			return 
 	}
 	
@@ -341,11 +366,11 @@ function touchToKeyCode(x, y) {
 		} else if (y > 1) {
 			keyCode = DIR.UP
 		}
-	}
+	
 	
 	return keyCode
 }
-
+}
 
 canvas.addEventListener('touchstart', onTouchStart)
 window.addEventListener('touchmove', onTouchMove)
