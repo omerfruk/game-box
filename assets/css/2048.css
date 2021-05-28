@@ -2,16 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
   background: #1D1F20;
-  color: #1D1F20;
+  color: #776e65;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
-  width: auto;
-  height: auto;
-  background: url("../background/bg.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 body {
@@ -28,7 +21,6 @@ h1.title {
   font-size: 80px;
   font-weight: bold;
   margin: 0;
-  color: #ffff;
   display: block;
   float: left;
 }
@@ -603,7 +595,6 @@ hr {
   body {
     margin: 20px 0;
     padding: 0 20px;
-    
   }
   h1.title {
     font-size: 50px;

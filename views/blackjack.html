@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/blackjack.css">
+  
+    <title>BlackJack</title>
+</head>
+<body>
+    <div class="pack casino"></div>
+
+<div class="deck"></div>
+
+<div class="pack player-hand"></div>
+
+<div class="control clearfix">
+  <div class="control-wrap">
+    <div class="wager">
+      <div class="bank" title="Your money">$<span></span></div>
+      <div class="bet">
+        Bet <input title="Use UP/DOWN arrows to adjust bet" type="number" name="quantity" min="5" max="50" step="5" value="10" class="bet-val">
+      </div>
+    </div>
+    <div class="actions">
+      <span class="deal-btn">
+        <button class="btn" title="Press 'D' to Deal">Deal</button>
+        <input title="Press 'A' for Autodeal" type="checkbox" class="autodeal"/>
+      </span>
+      <button class="btn hit-btn"  title="Press 'H' to Hit" disabled>Kart Çek</button>
+      <button class="btn stand-btn"  title="Press 'S' to Stand" disabled>Kal</button>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+      <script src="../assets/js/blackjack.js"></script>
+</body>
+</html>
