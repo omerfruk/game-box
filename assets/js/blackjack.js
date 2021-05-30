@@ -1,10 +1,4 @@
-/*
-Author: @romanyanke
-Website: http://yanke.ru
-About: Black Jack game. 
-Date: 4-6 Dec '12
-Thanks: Lea Verou (http://lea.verou.me/css3patterns/), JSFromHell (http://jsfromhell.com/array/shuffle)
-*/
+
 var debug = '';
 $(function(){
     var util = {
@@ -45,7 +39,7 @@ $(function(){
 	};
 	var status = 'idle';
 	var stake = 0;
-	var money = util.local.get('21money') ? Math.max(util.local.get('21money'),5): 10;
+	var money = util.local.get('21money') ? Math.max(util.local.get('21money'),100): 5;
 
 	account.html(money);
 	var deal = function(end){		

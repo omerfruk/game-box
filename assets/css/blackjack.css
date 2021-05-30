@@ -487,3 +487,21 @@ background-size: 70px 120px;
     background: #fff;
     transform: rotateX(0deg) rotateY(0deg);
 }
+.gamescience{
+    background-color: rgb(9, 134, 20);
+    position: fixed;
+    left: 15%;
+    top:5%;
+    box-sizing: border-box;
+    width: 1024px !important;
+    height: 600px !important;
+}
+body {
+    width: auto;
+    height: auto;
+    background: url("../background/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
