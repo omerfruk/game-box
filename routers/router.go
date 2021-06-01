@@ -25,6 +25,9 @@ func Router(app *fiber.App) {
 	game := app.Group("/game")
 	game.Get("/snake", handlers.SnakeGame)
 	game.Get("/sayi-toplama", handlers.Sayitoplama)
+	game.Get("/mario", handlers.Mario)
+	game.Get("/black-jack", handlers.BlackJack)
+	game.Get("/dino", handlers.Dino)
 
 	//developers sayfasina yönlendiricisi
 	app.Get("/developers", handlers.Developers)

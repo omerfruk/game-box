@@ -10,3 +10,12 @@ func SnakeGame(c *fiber.Ctx) error {
 func Sayitoplama(c *fiber.Ctx) error {
 	return c.Render("sayi_topla", true)
 }
+func Mario(c *fiber.Ctx) error {
+	return c.Render("mario", true)
+}
+func BlackJack(c *fiber.Ctx) error {
+	return c.Render("blackjack", true)
+}
+func Dino(c *fiber.Ctx) error {
+	return c.Render("dino", true)
+}
