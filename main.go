@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"log"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -13,19 +15,22 @@ import (
 func main() {
 	engine := html.New("views", ".html")
 	app := fiber.New(fiber.Config{Views: engine})
-	app.Use(cors.New())
-	// deneme islemleri 2
+	app.Use(cors.New(cors.Config{
+		AllowOrigins:     "*",
+		AllowHeaders:     "Origin, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization",
+		MaxAge:           86400,
+		AllowMethods:     "POST, GET, OPTIONS, PUT, DELETE, UPDATE",
+		ExposeHeaders:    "Content-Length",
+		AllowCredentials: true,
+	}))
+
 	database.ConnectAndMigrate()
 	routers.Router(app)
 
-	/*
-		service.CreateDeveloper("Omer Faruk TASDEMİR", "omer@mail.com", "Back-end Developer", "github.com/omerfruk", "instagram.com/omer_fruk", "https://www.linkedin.com/in/%C3%B6mer-faruk-ta%C5%9Fdemir-255114183/", "../img/developers/omer.jpg")
-		service.CreateDeveloper("Serhat KARAKOCA", "serhatkarakoca@mail.com", "Game Developer", "github.com/serhatkarakoca", "instagram.com/serhat.karakoca", "https://www.linkedin.com/in/serhatkarakoca", "../img/developers/serhat.jpg")
-		service.CreateDeveloper("İbrahim CAKAR", "cakaribrahim37@mail.com", "Full-Stack Developer", "github.com/ibrahimcakar", "instagram.com/ibocakar", "https://www.linkedin.com/in/ibrahim-çakar-825041183//", "../img/developers/ibrahim.jpg")
-		service.CreateDeveloper("Emrullah KUTLAR", "emrullah.ktlr@mail.com", "Front-end Developer", "https://github.com/EmrullahKutlar", "instagram.com/emrllah_k", "https://www.linkedin.com/", "../img/developers/emrullah.jpg")
-		service.CreateDeveloper("Osman YILMAZ", "osman.yilmaz@hotmail.com", " Junior Software Developer", "github.com/osmanyılmaz", "instagram.com/osman.yılmaz","https://www.linkedin.com/","../img/developers/osman.jpg")
-		service.CreateDeveloper("musa yıldırım", "musayildirim.yldrm@gmail.com", " Junior Software Developer", "github.com/Sunset2226", "instagram.com/musayldr.m","https://www.linkedin.com/","../img/developers/musa.jpg")
-	*/
-	log.Fatal(app.Listen(":4747"))
+	port := "4747"
+	if os.Getenv("ASPNETCORE_PORT") != "" {
+		port = os.Getenv("ASPNETCORE_PORT")
+	}
+	log.Fatal(app.Listen(fmt.Sprintf(":%s", port)))
 
 }

@@ -22,7 +22,9 @@ func Router(app *fiber.App) {
 	app.Get("/logout", handlers.Logout)
 
 	//oyun sayfasina yönlendirme
-	app.Get("/game/snake", handlers.SnakeGame)
+	game := app.Group("/game")
+	game.Get("/snake", handlers.SnakeGame)
+	game.Get("/sayi-toplama", handlers.Sayitoplama)
 
 	//developers sayfasina yönlendiricisi
 	app.Get("/developers", handlers.Developers)
