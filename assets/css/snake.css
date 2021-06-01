@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 html, body {
     width: 100%;
     height: 100%;
@@ -8,31 +9,38 @@ html, body {
     background: #006054;
     font-family: "Varela Round";
 }
+
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
     background: url("../background/bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 .container {
     width: 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    justify-content: center;
+    align-content: center;
     max-width: 400px;
     border: 5px solid #ffa000;
     border-radius: 3px;
     box-shadow: 10px 10px 50px 15px rgba(0, 0, 0, 0.3);
     background-color: #455a64;
     position: relative;
+    display: flex;
 }
+
 .canvas-wrapper {
     width: 100%;
     height: 0;
     padding-bottom: 100%;
     position: relative;
 }
+
 canvas {
     position: absolute;
     top: 0;
@@ -43,6 +51,7 @@ canvas {
     width: 100%;
     background-color: #37474f;
 }
+
 .controls {
     width: 100%;
     padding-top: 20px;
@@ -51,6 +60,7 @@ canvas {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 button[class^="btn"] {
     background-color: #ffa000;
     padding: 5px 20px;
@@ -73,18 +83,22 @@ button[class^="btn"] {
     margin: 0 20px 0;
     margin-bottom: 20px;
 }
+
 button[class^="btn"]:hover {
     background: #ffb333;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
 }
+
 @media (min-width: 450px) {
     button[class^="btn"] {
         width: 150px;
-   }
+    }
 }
+
 button[disabled] {
     background: #cc8000;
 }
+
 .range {
     width: 100%;
     margin-bottom: 20px;
@@ -92,12 +106,14 @@ button[disabled] {
     display: flex;
     align-items: center;
 }
+
 .range label {
     color: white;
     text-transform: uppercase;
     margin-right: 20px;
     width: 30%;
 }
+
 .range_inputWrapper {
     width: 100%;
     position: relative;
@@ -105,6 +121,7 @@ button[disabled] {
     background-color: #fff;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
+
 .range_inputValue {
     position: absolute;
     left: 0;
@@ -116,6 +133,7 @@ button[disabled] {
     padding-left: 3px;
     line-height: 20px;
 }
+
 .range_inputSlider {
     transform-origin: left top;
     position: absolute;
@@ -128,6 +146,7 @@ button[disabled] {
     transform: scaleX(0);
     transition: transform 0.2s ease-out;
 }
+
 .range input {
     position: absolute;
     left: 0;
@@ -139,6 +158,7 @@ button[disabled] {
     cursor: ew-resize;
     z-index: 1;
 }
+
 .score {
     position: absolute;
     top: 10px;
@@ -152,26 +172,32 @@ button[disabled] {
     text-transform: uppercase;
     color: white;
 }
+
 .dpad {
     width: 100px;
     margin: 0 auto;
     margin-bottom: 20px;
     display: none;
 }
+
 button[class^="control"] {
     background: #ffa000;
     border: none;
     border-radius: 3px;
 }
+
 .control-up {
     display: block;
 }
+
 .control-down svg {
     transform: rotate(180deg);
 }
+
 .control-left svg {
     transform: rotate(90deg);
 }
+
 .control-right svg {
     transform: rotate(-90deg);
 }

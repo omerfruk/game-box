@@ -2,12 +2,13 @@
 <link rel="stylesheet" href="../assets/css/snake.css">
 </head>
 <body>
-<div class="container">
-        <div class="score">		
+{{template "icp/navbar" . }}
+    <div class="container">
+        <div class="score">
             score: <span class="score_val">0</span>
-            HS: <span id = "highscore"> 0</span>
+            HS: <span id="highscore"> 0</span>
         </div>
-        
+
         <div class="canvas-wrapper">
             <canvas width="400" height="400"></canvas>
         </div>
@@ -15,22 +16,22 @@
             <button class="btn-start">Start</button>
             <button class="btn-pause">Pause</button>
             <div class="range range-difficulty">
-                <label for="difficulty">HIZ</label>
+                <label for="difficulty" style="color: red">HIZ</label>
                 <div class="range_inputWrapper">
                     <span class="range_inputSlider"></span>
                     <div class="range_inputValue"></div>
                     <input type="range" name="difficulty"
-                       value="8" min="1" max="10" step="1" >
+                           value="8" min="1" max="10" step="1">
                 </div>
             </div>
-            
+
             <div class="range range-columns">
                 <label for="columns">ALAN BOYUTU</label>
                 <div class="range_inputWrapper">
                     <span class="range_inputSlider"></span>
                     <div class="range_inputValue"></div>
                     <input type="range" name="columns"
-                         value="20" min="10" max="100" step="10">
+                           value="20" min="10" max="100" step="10">
                 </div>
             </div>
         </div>
