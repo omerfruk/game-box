@@ -8,8 +8,6 @@ html, body {
 }
 
 body {
-  width: auto;
-  height: auto;
   background: url("../background/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -806,4 +804,3 @@ hr {
     margin-top: 30px !important;
   }
 }
-/*# sourceMappingURL=2048.css.map */
