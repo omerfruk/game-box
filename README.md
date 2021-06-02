@@ -2,25 +2,25 @@
 
 ## YAPILACAKLAR
 
-- [ ] index sayfasi olusrurulacak
-- [ ] responsive bir dizayn olusturulacak
-- [ ] topbar js ve css ile desteklenecek
-- [ ] index sayfasına oyunlarin önizlenimi gömülecek
+- [x] index sayfasi olusrurulacak
+- [x] responsive bir dizayn olusturulacak
+- [x] topbar js ve css ile desteklenecek
+- [x] index sayfasına oyunlarin önizlenimi gömülecek
 - [ ] index sayfasına randum oyun leaderboardlari gösterilecek
-- [ ] session veya jwt kullanılıp oturum yönetilecek
-- [ ] postgreSql kullanılıp veri depolaması yapılacak
-- [ ] servisler olusturulacak (querry sorgulari olusturulacak) 
-- [ ] footerBar yukari tasinilacak (yukseklik biraz daha articak)
+- [x] session veya jwt kullanılıp oturum yönetilecek
+- [x] postgreSql kullanılıp veri depolaması yapılacak
+- [x] servisler olusturulacak (querry sorgulari olusturulacak) 
+- [x] footerBar yukari tasinilacak (yukseklik biraz daha articak)
 - [x] login front-end sayfasi yapilacak
 - [x] Sign front-end Up sayfasi yapilacak
-- [ ] login back-end sayfasi bağlanacak
-- [ ] Sign back-end sayfasi bağlanacak
-- [ ] renk ayarlari yapilacak
-- [ ] oyunlar yazilacak
+- [x] login back-end sayfasi bağlanacak
+- [x] Sign back-end sayfasi bağlanacak
+- [x] renk ayarlari yapilacak
+- [x] oyunlar yazilacak
 - [x] database şemasi çizilecek (hayal edilecek)
-- [ ] models olusturulup db baglantisi yapilacak
-- [ ] back and routerlari olusturulacak
-- [ ] domain satin alinacak
+- [x] models olusturulup db baglantisi yapilacak
+- [x] back and routerlari olusturulacak
+- [x] domain satin alinacak
 
 
 ## MARKDOWN
