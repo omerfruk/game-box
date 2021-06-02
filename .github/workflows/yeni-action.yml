@@ -1,0 +1,61 @@
+name: GameBox
+
+on:
+  push:
+    branches: [ masters ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: PENCERELER
+    steps:
+
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.14
+
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - name: Get Dependencies
+        run: go get -v -t -d
+
+      - name: Create Exe
+        run: |
+          set GOARCH=amd64
+          set GOOS=windows
+          go build --tags prod -ldflags "-s -w" -o gamebox.exe
+      - name: Delete Publish Folder
+        run: |
+          rm -r -fo publish
+        continue-on-error: true
+
+      - name: Create Publish File
+        run: |
+          mkdir publish
+          cp web.config publish/
+      - name: views dosyalari kopyala
+        run: |
+          mv views/ publish/
+          mv assets/ publish/
+          mv gamebox.exe publish
+      - name: App Offline Aktifleştir
+        run: |
+          $env:UserName
+          Rename-Item -Path D:\Siteler\teknolojilideri.xyz\hadis\app_offline1.htm -NewName "app_offline.htm"
+        continue-on-error: true
+
+      - name: Gebert
+        run: taskkill /f /fi "USERNAME eq teknolojilideri.xyz" /im w3wp.exe
+        continue-on-error: true
+
+      - name: Dosyaları tasi
+        run: Copy-Item -Path .\publish\* -Destination D:\Siteler\tekonolojilideri.xyz\ -recurse -force
+
+      - name: App Offline Devre Disi
+        run: |
+          $env:UserName
+          Rename-Item -Path D:\Siteler\teknolojilideri.xyz\app_offline.htm -NewName "app_offline1.htm"
+        continue-on-error: true
