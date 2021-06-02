@@ -9,10 +9,10 @@ import (
 )
 
 const (
-	HOST     = "pencereler.hayrat.dev"
-	DATABASE = "teknolojilideri.xyz"
-	USER     = "teknolojilideri.xyz"
-	PASSWORD = "teknolojilideri.xyz1442?"
+	HOST     = "localhost"
+	DATABASE = "gamebox"
+	USER     = "postgres"
+	PASSWORD = "123"
 )
 
 var db *gorm.DB
