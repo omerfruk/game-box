@@ -1,7 +1,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #1D1F20;
   color: #776e65;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
@@ -122,7 +121,15 @@ hr {
   width: 500px;
   margin: 0 auto;
 }
+.oyunalanı{
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  position: absolute;
+  top: 12%;
+  left: 33%;
 
+}
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
