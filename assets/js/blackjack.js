@@ -1,7 +1,7 @@
 
 var debug = '';
 $(function(){
-    var util = {
+	var util = {
 		randomize: function(from, to, r){
 			return Math.floor( Math.random() * (to - from) + from );
 		},
@@ -39,11 +39,11 @@ $(function(){
 	};
 	var status = 'idle';
 	var stake = 0;
-	var money = util.local.get('21money') ? Math.max(util.local.get('21money'),100): 5;
+	var money = util.local.get('21money') ? Math.max(util.local.get('21money'),100): 100;
 
 	account.html(money);
-	var deal = function(end){		
-		if(end === true){			
+	var deal = function(end){
+		if(end === true){
 			if(total.casino == total.player){
 				say('Kal. '+total.casino);
 				acc.give(+stake);
@@ -64,7 +64,7 @@ $(function(){
 			var mark = '<span class="mark">\
 							<h1>'+cardData.value+'</h1>\
 							<h2>&'+cardData.suit+';</h2>\
-						</span>';				
+						</span>';
 			var suits = '<span class="suit">&'+cardData.suit+';</span>';
 			if(cardData.order<10){
 				for(var l=0; l<cardData.order; l++){
@@ -75,7 +75,7 @@ $(function(){
 			card += mark+suits+mark;
 			card += '</div><div class="back"></div></div>';
 			card = $(card);
-			card.css({top:$('.deck').offset().top, left:$('.deck').offset().left});		
+			card.css({top:$('.deck').offset().top, left:$('.deck').offset().left});
 			var pack = casino;
 			if(turn.player) {
 				pack = playerHand;
@@ -83,7 +83,7 @@ $(function(){
 			} else {
 				total.casino += cardData.score;
 			}
-			
+
 			/*card animation*/
 			var stack = pack.find('.card').length;
 			var size = pack.width()*.5;
@@ -190,11 +190,11 @@ $(function(){
 			casino:0
 		};
 		deck = util.shuffle(deck);
-	
+
 		say('Birdaha');
 		debug += '<<NEW GAME>>';
 		stake = $('.bet-val').val();
-		if(stake<5 || stake>50){
+		if(stake<5 || stake>100){
 			stake = 10;
 			$('.bet-val').val(10);
 		}
@@ -207,28 +207,28 @@ $(function(){
 		acc.take(stake);
 		deal();
 	};
-	
+
 	var redeal = function(){
 		status = 'idle';
 		var center = $('.player-hand').width()*.5;
 		$('.player-hand .card, .casino .card').animate({left:center-55, opacity:0},speed,function(){
 			$(this).remove();
 		});
-		
+
 		if(money===0){
 			$('.autodeal').prop('checked',false);
-			say('Senin için bir abimmiz 5$ bıraktı😉 Bunu iyi kullan!','casino',5000);
-			acc.give(5);
+			say('Senin için bir abimmiz 10$ bıraktı😉 Bunu iyi kullan!','casino',5000);
+			acc.give(10);
 			$('.bet-val').val(5);
 		}
-		
+
 		if($('.autodeal').prop('checked')){
 			setTimeout(dealer,speed*1.2);
 		} else {
 			dealbtn.enable();
 		}
 	};
-	
+
 	var casinoDeal = function(){
 		say(total.casino);
 		if(total.casino>=17 || total.casino>total.player){
@@ -240,7 +240,7 @@ $(function(){
 			setTimeout(deal,speed);
 		}
 	};
-	
+
 	var say = function(what, who, display) {
 		var target = who||'casino';
 		var balloon = $('<div class="speakballon '+target+'-speak">'+what+'</div>');
@@ -254,7 +254,7 @@ $(function(){
 			});
 		},(display||2000));
 	};
-	
+
 	var acc = {
 		take:function(i){
 			money -= i;
@@ -267,7 +267,7 @@ $(function(){
 			util.local.set('21money',money);
 		}
 	};
-	
+
 	$('.hit-btn').on('click', function(){
 		debug += '<<HIT>>';
 		hitstand.disable();
@@ -283,7 +283,7 @@ $(function(){
 		say('Kal','player');
 		setTimeout(casinoDeal,speed);
 	});
-	
+
 	$('.autodeal').on('click',function(){
 		dealbtn.disable();
 		var btn = $('.deal-btn .btn');
@@ -296,42 +296,42 @@ $(function(){
 		dealbtn.disable();
 		dealer();
 	});
-	
-	say('Paranı Koy');	
+
+	say('Paranı Koy');
 	$(document).on('keydown',function(e){
 		switch (e.keyCode){
 			case 68:
 				$('.deal-btn .btn:enabled').click();
-			break;
+				break;
 			case 72:
 				$('.hit-btn:enabled').click();
-			break;
+				break;
 			case 83:
 				$('.stand-btn:enabled').click();
-			break;
+				break;
 			case 38:
-				$('.bet-val').val(Math.min(+$('.bet-val').val()+5, 50));
-			break;
+				$('.bet-val').val(Math.min(+$('.bet-val').val()+5, 100));
+				break;
 			case 40:
 				$('.bet-val').val(Math.max(+$('.bet-val').val()-5, 5));
-			break;
+				break;
 			case 65:
 				$('.autodeal').click();
-			break;
+				break;
 		}
 	});
 	;(function($) {
 
-    $.fn.extend({
-		enable: function() {
-			this.prop('disabled',false);
-			return this;	
-		},
-		disable: function() {
-			this.prop('disabled',true);
-			return this;	
-		}
-	});
+		$.fn.extend({
+			enable: function() {
+				this.prop('disabled',false);
+				return this;
+			},
+			disable: function() {
+				this.prop('disabled',true);
+				return this;
+			}
+		});
 	})(jQuery);
 	$('.bet-val').val(util.local.get('21stake')|| 10);
 });	
