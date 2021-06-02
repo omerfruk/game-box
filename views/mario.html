@@ -1,40 +1,37 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta name="viewport" content="width=1280" />
-  <title>Mario Maker</title>
-  <link rel="stylesheet" type="text/css" href="../assets/css/mario/style.css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/mario/reset.css">
+{{template "icp/head" }}
+<title>Mario Maker</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/mario/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/mario/reset.css">
 </head>
 
 <body>
- 
+{{template "icp/navbar" .}}
 
-  <!-- main game -->
-  <div class="main-wrapper">
-    <canvas class="game-screen"></canvas>
-  </div>
-  <script src="../assets/js/mario/View.js"></script>
-  <script src="../assets/js/mario/GameUI.js"></script>
+<!-- main game -->
+<div class="oyunalanı">
+    <div class="main-wrapper">
+        <canvas class="game-screen"></canvas>
+    </div>
+    <script src="../assets/js/mario/View.js"></script>
+    <script src="../assets/js/mario/GameUI.js"></script>
 
-  <script src="../assets/js/mario/mainGame/GameSound.js"></script>
-  <script src="../assets/js/mario/mainGame/Element.js"></script>
-  <script src="../assets/js/mario/mainGame/PowerUp.js"></script>
-  <script src="../assets/js/mario/mainGame/Enemy.js"></script>
-  <script src="../assets/js/mario/mainGame/Bullet.js"></script>
-  <script src="../assets/js/mario/mainGame/Mario.js"></script>
-  <script src="../assets/js/mario/mainGame/Score.js"></script>
-  <script src="../assets/js/mario/mainGame/MarioGame.js"></script>
+    <script src="../assets/js/mario/mainGame/GameSound.js"></script>
+    <script src="../assets/js/mario/mainGame/Element.js"></script>
+    <script src="../assets/js/mario/mainGame/PowerUp.js"></script>
+    <script src="../assets/js/mario/mainGame/Enemy.js"></script>
+    <script src="../assets/js/mario/mainGame/Bullet.js"></script>
+    <script src="../assets/js/mario/mainGame/Mario.js"></script>
+    <script src="../assets/js/mario/mainGame/Score.js"></script>
+    <script src="../assets/js/mario/mainGame/MarioGame.js"></script>
 
-  <script src="../assets/js/mario/levelEditor/Storage.js"></script>
-  <script src="../assets/js/mario/levelEditor/Editor.js"></script>
-  <script src="../assets/js/mario/levelEditor/CreatedLevels.js"></script>
+    <script src="../assets/js/mario/levelEditor/Storage.js"></script>
+    <script src="../assets/js/mario/levelEditor/Editor.js"></script>
+    <script src="../assets/js/mario/levelEditor/CreatedLevels.js"></script>
 
-  <script src="../assets/js/mario/MarioMaker.js"></script>
+    <script src="../assets/js/mario/MarioMaker.js"></script>
 
-  <script src="../assets/js/mario/Preloader.js"></script>
-
+    <script src="../assets/js/mario/Preloader.js"></script>
+</div>
 </body>
 
 </html>

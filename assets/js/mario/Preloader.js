@@ -41,8 +41,8 @@ function Preloader() {
       23: '../img/mario/slider-left.png',
       24: '../img/mario/slider-right.png',
       25: '../img/mario/start-btn.png'
+      
     };
-
     that.loadImages(imageSources);
   };
 

@@ -107,16 +107,17 @@ input[type=checkbox] {
 }
 
 .interstitial-wrapper {
-  margin-top:10% !important;
   box-sizing: border-box;
   font-size: 1em;
   line-height: 1.6em;
-  margin: 50px auto 0;
-  max-width: 600px;
+  margin: 0px auto 0;
+  max-width: 800px;
   width: 100%;
- height: 400px;
+  height: 500px;
   background-color: #f9f9f9;
   opacity: 0.9;
+  padding-top: 50px !important;
+
 }
 
 #malware-opt-in {
@@ -599,4 +600,12 @@ html[subframe] body {
   .nav-wrapper {
     margin-top: 30px;
   }
+}
+
+.oyunbolg{
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 7%;
 }
