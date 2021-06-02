@@ -2,7 +2,7 @@ function PowerUp() {
   var gameUI = GameUI.getInstance();
 
   var element = new Image();
-  element.src = '../img/mario/powerups.png';
+  element.src = '../../../../img/mario/powerups.png';
 
   this.type;
   this.x;

@@ -12,15 +12,15 @@ function GameSound() {
   var that = this;
 
   this.init = function() {
-    coin = new Audio('/game-box/assets/sounds/coin.wav');
-    powerUpAppear = new Audio('/game-box/assets/sounds/power-up-appear.wav');
-    powerUp = new Audio('/game-box/assets/sounds/power-up.wav');
-    marioDie = new Audio('/game-box/assets/sounds/mario-die.wav');
-    killEnemy = new Audio('/game-box/assets/sounds/kill-enemy.wav');
-    stageClear = new Audio('/game-box/assets/sounds/stage-clear.wav');
-    bullet = new Audio('/game-box/assets/sounds/bullet.wav');
-    powerDown = new Audio('/game-box/assets/sounds/power-down.wav');
-    jump = new Audio('/game-box/assets/sounds/jump.wav');
+    coin = new Audio('../../../assets/sounds/coin.wav');
+    powerUpAppear = new Audio('../../../assets/sounds/power-up-appear.wav');
+    powerUp = new Audio('../../../assets/sounds/power-up.wav');
+    marioDie = new Audio('../../../assets/sounds/mario-die.wav');
+    killEnemy = new Audio('../../../assets/sounds/kill-enemy.wav');
+    stageClear = new Audio('../../../assets/sounds/stage-clear.wav');
+    bullet = new Audio('../../../assets/sounds/bullet.wav');
+    powerDown = new Audio('../../../assets/sounds/power-down.wav');
+    jump = new Audio('../../../assets/sounds/jump.wav');
   };
 
   this.play = function(element) {

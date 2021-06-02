@@ -5,7 +5,7 @@ function Enemy() {
   var maxTick = 10; //max number for ticks to show enemy sprite
 
   var element = new Image();
-  element.src = '../img/mario/enemies.png';
+  element.src = '../../../../img/mario/enemies.png';
 
   this.x;
   this.y;

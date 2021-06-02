@@ -2,7 +2,8 @@ function Bullet() {
   var gameUI = GameUI.getInstance();
 
   var element = new Image();
-  element.src = '../img/mario/bullet.png';
+  element.src = '../../../../img/mario/bullet.png';
+
 
   this.x;
   this.y;

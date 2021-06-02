@@ -2,7 +2,7 @@ function Element() {
   var gameUI = GameUI.getInstance();
 
   var element = new Image();
-  element.src = '../img/mario/elements.png';
+  element.src = '../../../../img/mario/elements.png';
 
   this.type;
   this.sX;
