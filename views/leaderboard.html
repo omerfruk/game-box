@@ -15,34 +15,7 @@
 
 <body>
   <!-- NavBar -->
-  <header class="top ">
-
-    <div class="logo">
-      <a href="index.html"> <img src="../assets/logo/Logo.png" alt=""></a>
-    </div>
-
-    <nav class="top-nav">
-      <ul class="navlink">
-        <li class="mor"><a href="/">Ana Sayfa</a></li>
-        <li class="pembe"><a href="/game/snake">Oyunlar</a></li>
-        <li class="yesil"><a href="/account/dashboard" style=" color:green">Leaderboards</a></li>
-        <li class="sari"><a href="/developers">Hakkımızda</a></li>
-        <ul class="giris1">
-          <li><a href="login.html"><button type="button" class="glow-on-hover">Giriş</button></a></li>
-          <li><a href="signup.html"><button type="button" class="glow-on-hover">Kayıt Ol</button></a></li>
-        </ul>
-      </ul>
-    </nav>
-    <div class="giris">
-      <ul>
-        <li><a href="login.html"><button type="button" class="glow-on-hover">Giriş</button></a></li>
-        <li><a href="signup.html"><button type="button" class="glow-on-hover">Kayıt Ol</button></a></li>
-      </ul>
-    </div>
-
-    <div class="menu-toggle"></div>
-
-  </header>
+  {{template "icp/navbar" .}}
   <section>
     <!-- for demo wrap -->
     <h1>Leader-Board</h1>
@@ -53,90 +26,59 @@
             <thead>
               <tr>
                 <th scope="col" >#</th>
-                <th scope="col">UserName</th>
-                <th scope="col">Game</th>
-                <th scope="col">Score</th>
+                <th scope="col">Game1</th>
+                <th scope="col">Game2</th>
+                <th scope="col">Game3</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td class="rainbow">Mark</td>
-                <td class="rainbow">Otto</td>
-                <td class="rainbow">@</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td class="rainbow">Jacob</td>
-                <td class="rainbow">Thornton</td>
-                <td class="rainbow">@</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td class="rainbow">Larry</td>
-                <td class="rainbow">the Bird</td>
-                <td class="rainbow">@</td>
-              </tr>
+            {{range $index,$data:=.L}}
+            <tr>
+              <th scope="row">{{$index}}</th>
+              <td class="rainbow">{{$data.Game1}}</td>
+              <td class="rainbow">{{$data.Game2}}</td>
+              <td class="rainbow">{{$data.Game3}}</td>
+            </tr>
+            {{end}}
             </tbody>
-          </table>
-          <table class="table table-dark "id="shadowBox">
+          </table> <table class="table table-dark "id="shadowBox">
             <thead>
               <tr>
                 <th scope="col" >#</th>
-                <th scope="col">UserName</th>
-                <th scope="col">Game</th>
-                <th scope="col">Score</th>
+                <th scope="col">Game1</th>
+                <th scope="col">Game2</th>
+                <th scope="col">Game3</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td class="rainbow">Mark</td>
-                <td class="rainbow">Otto</td>
-                <td class="rainbow">@</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td class="rainbow">Jacob</td>
-                <td class="rainbow">Thornton</td>
-                <td class="rainbow">@</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td class="rainbow">Larry</td>
-                <td class="rainbow">the Bird</td>
-                <td class="rainbow">@</td>
-              </tr>
+            {{range $index,$data:=.L}}
+            <tr>
+              <th scope="row">{{$index}}</th>
+              <td class="rainbow">{{$data.Game1}}</td>
+              <td class="rainbow">{{$data.Game2}}</td>
+              <td class="rainbow">{{$data.Game3}}</td>
+            </tr>
+            {{end}}
             </tbody>
           </table>
-          <table class="table table-dark"id="shadowBox">
+          <table class="table table-dark " id="shadowBox">
             <thead>
-              <tr>
-                <th scope="col" >#</th>
-                <th scope="col">UserName</th>
-                <th scope="col">Game</th>
-                <th scope="col">Score</th>
-              </tr>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Game1</th>
+              <th scope="col">Game2</th>
+              <th scope="col">Game3</th>
+            </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td class="rainbow">Mark</td>
-                <td class="rainbow">Otto</td>
-                <td class="rainbow">@</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td class="rainbow">Jacob</td>
-                <td class="rainbow">Thornton</td>
-                <td class="rainbow">@</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td class="rainbow">Larry</td>
-                <td class="rainbow">the Bird</td>
-                <td class="rainbow">@</td>
-              </tr>
+            {{range $index,$data:=.L}}
+            <tr>
+              <th scope="row">{{$index}}</th>
+              <td class="rainbow">{{$data.Game1}}</td>
+              <td class="rainbow">{{$data.Game2}}</td>
+              <td class="rainbow">{{$data.Game3}}</td>
+            </tr>
+            {{end}}
             </tbody>
           </table>
         </div>
@@ -150,7 +92,7 @@
   <!-- footer  -->
   <footer>
     <div class="foot">
-      {{range $index,$data:=.Developers}}
+      {{range $index,$data:=.D}}
       <div class="kartlar  kartlar900 ">
         <div class="resim"><img src="{{$data.Imgsrc}}" alt=""></div>
         <div class="bilgi">
