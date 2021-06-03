@@ -5,10 +5,12 @@ import (
 	"github.com/omerfruk/game-box/service"
 )
 
-func DashboardGet(c *fiber.Ctx) error {
+func Getleaderboard(c *fiber.Ctx) error {
+	leaderboard := service.GetScore()
 	developers := service.GetDeveloperAll()
 	return c.Render("leaderboard", fiber.Map{
-		"Developers": developers,
-		"Boll":       true,
+		"L":    leaderboard,
+		"D":    developers,
+		"Bool": true,
 	})
 }
