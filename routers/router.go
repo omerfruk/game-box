@@ -11,6 +11,8 @@ func Router(app *fiber.App) {
 	app.Static("/", "./")
 
 	app.Get("/", handlers.IndexGet)
+	//leader board icin router
+	app.Get("/leaderboard", handlers.Getleaderboard)
 
 	//signup post ve get metodlari yonlendirmesi
 	app.Get("/signup", handlers.SignupGet)
@@ -35,10 +37,9 @@ func Router(app *fiber.App) {
 	app.Get("/account/:key", handlers.GetAccount)
 
 	//session kontrol
-	add := app.Group("/account", sessionControl)
+	//add := app.Group("/account", sessionControl)
 
 	//dashboard yonlendiricisi
-	add.Get("/dashboard", handlers.DashboardGet)
 	//developer yönlendirici
 	//add.Get("/developer/:key", handlers.DeveloperGet)
 }
